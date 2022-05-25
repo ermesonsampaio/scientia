@@ -1,0 +1,1334 @@
+{
+  "quizzes": [
+    {
+      "id": "fa90666d-2fa7-47ea-a0cc-5d993a7916de",
+      "title": "Termodinâmica",
+      "time": 30,
+      "author": "Ermeson Sampaio",
+      "category": "Física",
+      "questions": [
+        {
+          "id": "d08c6e20-84b5-4d3f-aaa3-b5594e505df9",
+          "quizId": "fa90666d-2fa7-47ea-a0cc-5d993a7916de",
+          "content": "Qual conceito é definido pela lei Zero da Termodinâmica?",
+          "options": [
+            {
+              "id": "ee775836-ace9-4067-800a-14bd1e6c0f0e",
+              "questionId": "d08c6e20-84b5-4d3f-aaa3-b5594e505df9",
+              "content": "Equilíbrio Térmico.",
+              "correct": true
+            },
+            {
+              "id": "c40e86d6-1943-420e-a16f-9e1532e6bc6f",
+              "questionId": "d08c6e20-84b5-4d3f-aaa3-b5594e505df9",
+              "content": "Variação Térmica.",
+              "correct": false
+            },
+            {
+              "id": "4f80ccae-0faa-4899-8ffe-7751bc41d1a5",
+              "questionId": "d08c6e20-84b5-4d3f-aaa3-b5594e505df9",
+              "content": "Equilíbrio da Energia Cinética.",
+              "correct": false
+            },
+            {
+              "id": "54875638-7978-425b-a501-0a77556e393e",
+              "questionId": "d08c6e20-84b5-4d3f-aaa3-b5594e505df9",
+              "content": "Variação da Energia Cinética.",
+              "correct": false
+            },
+            {
+              "id": "1c942b35-ea49-4f94-8a84-59dfa0d38bb7",
+              "questionId": "d08c6e20-84b5-4d3f-aaa3-b5594e505df9",
+              "content": "Calor Latente.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "82bff772-344b-4326-acfd-ca281bc20821",
+          "quizId": "fa90666d-2fa7-47ea-a0cc-5d993a7916de",
+          "content": "O que é Calor?",
+          "options": [
+            {
+              "id": "e5f17e1b-2534-44b3-a2e5-4ea5b26bf858",
+              "questionId": "82bff772-344b-4326-acfd-ca281bc20821",
+              "content": "É o grau de agitação das moléculas.",
+              "correct": false
+            },
+            {
+              "id": "10b5565c-e96f-4030-acc6-6c800e232950",
+              "questionId": "82bff772-344b-4326-acfd-ca281bc20821",
+              "content": "É a mesma coisa que Temperatura.",
+              "correct": false
+            },
+            {
+              "id": "702964f7-44fd-4d9c-8175-73c11b24656f",
+              "questionId": "82bff772-344b-4326-acfd-ca281bc20821",
+              "content": "É o grau de agitação da massa de um corpo.",
+              "correct": false
+            },
+            {
+              "id": "977070dd-4470-4c06-b1ac-ca9b69086d28",
+              "questionId": "82bff772-344b-4326-acfd-ca281bc20821",
+              "content": "É energia térmica em trânsito.",
+              "correct": true
+            },
+            {
+              "id": "b2f62bcf-f145-418b-b568-a86eff871abb",
+              "questionId": "82bff772-344b-4326-acfd-ca281bc20821",
+              "content": "É energia cinética em trânsito.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "c42324d2-ab89-4be7-9628-37397abf2798",
+          "quizId": "fa90666d-2fa7-47ea-a0cc-5d993a7916de",
+          "content": "Do ponto de vista da primeira lei da termodinâmica, o balanço de energia de um dado sistema é dado em termos de três grandezas, sendo \"elas\":",
+          "options": [
+            {
+              "id": "9255305f-19c5-4f31-aba2-e1eca7c17c93",
+              "questionId": "c42324d2-ab89-4be7-9628-37397abf2798",
+              "content": "pressão, volume e temperatura.",
+              "correct": false
+            },
+            {
+              "id": "0d495289-8914-4122-a09b-c6ea3043d165",
+              "questionId": "c42324d2-ab89-4be7-9628-37397abf2798",
+              "content": "calor, energia interna e volume.",
+              "correct": false
+            },
+            {
+              "id": "5bc26d22-b2de-459e-8239-b655eda89ba8",
+              "questionId": "c42324d2-ab89-4be7-9628-37397abf2798",
+              "content": "trabalho, calor e energia interna.",
+              "correct": true
+            },
+            {
+              "id": "19746189-0a4e-493e-9d81-e325a431c39e",
+              "questionId": "c42324d2-ab89-4be7-9628-37397abf2798",
+              "content": "trabalho, calor e densidade.",
+              "correct": false
+            },
+            {
+              "id": "5b57d433-2168-4457-acb0-a249a99d1f5e",
+              "questionId": "c42324d2-ab89-4be7-9628-37397abf2798",
+              "content": "trabalho, energia interna, e densidade.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "5c480fc0-d2b0-45bb-91db-da65802de8a7",
+          "quizId": "fa90666d-2fa7-47ea-a0cc-5d993a7916de",
+          "content": "Se a energia cinética média das moléculas de um gás aumentar e o volume permanecer \"constante\":",
+          "options": [
+            {
+              "id": "a7b44f03-e218-485a-9233-91ac95981952",
+              "questionId": "5c480fc0-d2b0-45bb-91db-da65802de8a7",
+              "content": "A pressão do gás aumentará e a sua temperatura permanecerá constante.",
+              "correct": false
+            },
+            {
+              "id": "de6bce06-9ec0-415a-9ea2-e894f984567e",
+              "questionId": "5c480fc0-d2b0-45bb-91db-da65802de8a7",
+              "content": "A pressão permanecerá constante e a temperatura aumentará.",
+              "correct": false
+            },
+            {
+              "id": "49ae94f3-21d0-4318-8005-c5753c333a59",
+              "questionId": "5c480fc0-d2b0-45bb-91db-da65802de8a7",
+              "content": "A pressão e a temperatura aumentarão.",
+              "correct": true
+            },
+            {
+              "id": "6179d433-92d1-417d-a33d-a946f314fc6d",
+              "questionId": "5c480fc0-d2b0-45bb-91db-da65802de8a7",
+              "content": "A pressão diminuirá e a temperatura aumentará.",
+              "correct": false
+            },
+            {
+              "id": "5f9cc394-e3a6-4dec-ac33-a4709a25e870",
+              "questionId": "5c480fc0-d2b0-45bb-91db-da65802de8a7",
+              "content": "A temperatura diminuirá e a pressão permanecerá constante.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "24426f6e-ccd2-4286-91ae-bae09a6332f1",
+          "quizId": "fa90666d-2fa7-47ea-a0cc-5d993a7916de",
+          "content": "Um técnico de manutenção de máquinas pôs para funcionar um motor térmico que executa 20 ciclos por segundo. Considerando-se que, em cada ciclo, o motor retira uma quantidade de calor de 1200 J de uma fonte quente e cede 800 J a uma fonte fria, é correto afirmar que o rendimento de cada ciclo \"é\":",
+          "options": [
+            {
+              "id": "537243eb-bb7a-4adb-8e04-f8014e0048fe",
+              "questionId": "24426f6e-ccd2-4286-91ae-bae09a6332f1",
+              "content": "13,3%",
+              "correct": false
+            },
+            {
+              "id": "93fed5c5-ab97-4282-a4eb-4a251152478f",
+              "questionId": "24426f6e-ccd2-4286-91ae-bae09a6332f1",
+              "content": "23,3%",
+              "correct": false
+            },
+            {
+              "id": "75cf0cf0-fd70-4fc9-8f2f-7f47b541e9be",
+              "questionId": "24426f6e-ccd2-4286-91ae-bae09a6332f1",
+              "content": "33,3%",
+              "correct": true
+            },
+            {
+              "id": "6656bbe9-ed37-463a-bfc5-e3a40933dfe9",
+              "questionId": "24426f6e-ccd2-4286-91ae-bae09a6332f1",
+              "content": "43,3%",
+              "correct": false
+            },
+            {
+              "id": "6656bbe9-ed37-463a-bfc5-e3a40933dfe9",
+              "questionId": "24426f6e-ccd2-4286-91ae-bae09a6332f1",
+              "content": "53,3%",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "5ee50935-def5-4823-9486-0e3941ef484c",
+      "title": "Guerra Fria",
+      "time": 30,
+      "category": "Geografia",
+      "author": "Eugênio",
+      "questions": [
+        {
+          "id": "2b57351a-9747-46c4-97b1-b417a4e37eef",
+          "quizId": "5ee50935-def5-4823-9486-0e3941ef484c",
+          "content": "Qual alternativa abaixo representa a opção correta a respeito da guerra fria?",
+          "options": [
+            {
+              "id": "eceb4ea8-bf92-4ea9-b70e-934111a1310c",
+              "questionId": "2b57351a-9747-46c4-97b1-b417a4e37eef",
+              "content": "A Guerra Fria foi um embate indireto entre EUA e URSS que ocorreu no período de 1947 até 1991.",
+              "correct": true
+            },
+            {
+              "id": "cd71cb29-fa98-4397-a8fe-ea9b88af491e",
+              "questionId": "2b57351a-9747-46c4-97b1-b417a4e37eef",
+              "content": "A Guerra Fria foi um confronto direto entre a Russia e EUA que ocorreu no período de 1989 até 1991.",
+              "correct": false
+            },
+            {
+              "id": "5c032f2e-dcba-4db5-a3cd-2d408aaf57e5",
+              "questionId": "2b57351a-9747-46c4-97b1-b417a4e37eef",
+              "content": "A Guerra Fria foi um confronto direto entre Brasil e Argentina que aconteceu em 1979.",
+              "correct": false
+            },
+            {
+              "id": "7a5992c8-3bfa-433b-bb4a-407666316f75",
+              "questionId": "2b57351a-9747-46c4-97b1-b417a4e37eef",
+              "content": "A Guerra Fria foi um confronto direto entre EUA e URSS no período de 1999 até 2017.",
+              "correct": false
+            },
+            {
+              "id": "347c8635-f555-48ab-afed-d455d4bc1815",
+              "questionId": "2b57351a-9747-46c4-97b1-b417a4e37eef",
+              "content": "A Guerra Fria foi um confronto direto entre Brasil e Uruguai que aconteceu em 2006.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "863ae87e-1eb7-4f52-b299-1f3fb2b73990",
+          "quizId": "5ee50935-def5-4823-9486-0e3941ef484c",
+          "content": "Quais destes eventos aconteream durante a guerra fria?\n",
+          "options": [
+            {
+              "id": "06cc678b-2135-42c9-8d55-a904e928a272",
+              "questionId": "863ae87e-1eb7-4f52-b299-1f3fb2b73990",
+              "content": "Segunda guerra mundial.",
+              "correct": false
+            },
+            {
+              "id": "21876801-41f3-4ba3-baa4-10743a0b79d1",
+              "questionId": "863ae87e-1eb7-4f52-b299-1f3fb2b73990",
+              "content": "Descobrimento das Américas.",
+              "correct": false
+            },
+            {
+              "id": "a5635052-c101-4795-8917-f2ee3ae5fedd",
+              "questionId": "863ae87e-1eb7-4f52-b299-1f3fb2b73990",
+              "content": "Corrida Espacial.",
+              "correct": true
+            },
+            {
+              "id": "52ea09ab-0410-4ee2-a2bb-fa8787e16929",
+              "questionId": "863ae87e-1eb7-4f52-b299-1f3fb2b73990",
+              "content": "Independência do Brasil.",
+              "correct": false
+            },
+            {
+              "id": "7bc4c1e6-49a1-4f90-bc3d-bb19a2f867f6",
+              "questionId": "863ae87e-1eb7-4f52-b299-1f3fb2b73990",
+              "content": "Primeira guerra mundial.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "18d4651f-c45d-4754-a8d7-fdce860c44f2",
+          "quizId": "5ee50935-def5-4823-9486-0e3941ef484c",
+          "content": "Porque que a Guerra Fria recebeu tal nome?",
+          "options": [
+            {
+              "id": "22598bf1-6f0f-4a37-83f7-e76a32df4ef6",
+              "questionId": "18d4651f-c45d-4754-a8d7-fdce860c44f2",
+              "content": "Porque foi antes do aquecimento global acontecer.",
+              "correct": false
+            },
+            {
+              "id": "2e55c575-1959-476d-9b0b-4b04cf548ef1",
+              "questionId": "18d4651f-c45d-4754-a8d7-fdce860c44f2",
+              "content": "Porque a URSS nomeou em homenagem ao seu clima predominante.",
+              "correct": false
+            },
+            {
+              "id": "fe1c84dc-1249-43a9-96d1-1446a20b92f6",
+              "questionId": "18d4651f-c45d-4754-a8d7-fdce860c44f2",
+              "content": "Porque os EUA passavam por épocas de crise.",
+              "correct": false
+            },
+            {
+              "id": "34101bb4-13ff-4421-8028-e511c2ecab86",
+              "questionId": "18d4651f-c45d-4754-a8d7-fdce860c44f2",
+              "content": "Porque a guerra aconteceu nos EUA onde é frio.",
+              "correct": false
+            },
+            {
+              "id": "535cdce4-ac2e-4ef0-8677-999e04c2e263",
+              "questionId": "18d4651f-c45d-4754-a8d7-fdce860c44f2",
+              "content": "Porque foi um confronto indireto e as coisas nunca \"esquentaram\".",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "id": "fe311f79-d3db-4415-b70a-a573c26f1bab",
+          "quizId": "5ee50935-def5-4823-9486-0e3941ef484c",
+          "content": "Quais foram as ideologias políticas que guiaram as duas potências?",
+          "options": [
+            {
+              "id": "874c25db-1390-4022-80c7-68736e8ab127",
+              "questionId": "fe311f79-d3db-4415-b70a-a573c26f1bab",
+              "content": "Os dois eram adeptos do capitalismo.",
+              "correct": false
+            },
+            {
+              "id": "253d5698-9111-4093-bf1b-5bd19beac10c",
+              "questionId": "fe311f79-d3db-4415-b70a-a573c26f1bab",
+              "content": "Os dois eram adeptos do socialismo.",
+              "correct": false
+            },
+            {
+              "id": "7fe2d555-02cb-40a5-b762-71c399e2640b",
+              "questionId": "fe311f79-d3db-4415-b70a-a573c26f1bab",
+              "content": "Os dois não tinham ideologias distintas.",
+              "correct": false
+            },
+            {
+              "id": "8762a186-0bb9-47cd-b108-efc64e7fdca8",
+              "questionId": "fe311f79-d3db-4415-b70a-a573c26f1bab",
+              "content": "Os EUA optou pelo capitalismo e a URSS pelo socialismo.",
+              "correct": true
+            },
+            {
+              "id": "f79a6b0c-9d5c-411e-b648-dd67db072f22",
+              "questionId": "fe311f79-d3db-4415-b70a-a573c26f1bab",
+              "content": "A URSS optou pelo capitalismo, ao contrário dos EUA que permaneceu no socialismo.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "f09eb045-bd27-4623-93c7-fc28107f904a",
+          "quizId": "5ee50935-def5-4823-9486-0e3941ef484c",
+          "content": "Qual acontecimento marcante ocorreu em 1989, durante a guerra fria?",
+          "options": [
+            {
+              "id": "e5b5f3be-4718-460c-a300-263a3c53000f",
+              "questionId": "f09eb045-bd27-4623-93c7-fc28107f904a",
+              "content": "A formação da União Ibérica.",
+              "correct": false
+            },
+            {
+              "id": "9ae856e2-0c0a-4c1d-8b37-54b82d3acc6c",
+              "questionId": "f09eb045-bd27-4623-93c7-fc28107f904a",
+              "content": "A queda do muro de Berlim.",
+              "correct": true
+            },
+            {
+              "id": "35c500d7-876f-428d-8f1d-dd7d03a8835b",
+              "questionId": "f09eb045-bd27-4623-93c7-fc28107f904a",
+              "content": "A construção do muro de Berlim.",
+              "correct": false
+            },
+            {
+              "id": "6a364de5-24a0-40ad-9fb5-366a91898694",
+              "questionId": "f09eb045-bd27-4623-93c7-fc28107f904a",
+              "content": "O acidente nuclear em Chernobyl.",
+              "correct": false
+            },
+            {
+              "id": "7840e0bf-a380-42f6-8683-e449f3498e87",
+              "questionId": "f09eb045-bd27-4623-93c7-fc28107f904a",
+              "content": "A chegada do homem na Lua.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "462495ad-5d40-429b-b4a9-24b26ff3e1ea",
+          "quizId": "5ee50935-def5-4823-9486-0e3941ef484c",
+          "content": "Selecione a opção que contém apenas as guerras que ocorreram no período da guerra fria.",
+          "options": [
+            {
+              "id": "c6d10155-5391-473f-bca0-1790e8fb00df",
+              "questionId": "462495ad-5d40-429b-b4a9-24b26ff3e1ea",
+              "content": "Guerra da Korea e guerra do Vietnã.",
+              "correct": true
+            },
+            {
+              "id": "301a3c95-2fe3-45be-8b01-b155655c0186",
+              "questionId": "462495ad-5d40-429b-b4a9-24b26ff3e1ea",
+              "content": "Guerra dos emboabas.",
+              "correct": false
+            },
+            {
+              "id": "7d34eb9a-6c06-458a-8541-8749505f649d",
+              "questionId": "462495ad-5d40-429b-b4a9-24b26ff3e1ea",
+              "content": "Guerra dos canudos e guerra do Afeganistão.",
+              "correct": false
+            },
+            {
+              "id": "ef2b2664-bd02-4ff9-8647-eba103bba336",
+              "questionId": "462495ad-5d40-429b-b4a9-24b26ff3e1ea",
+              "content": "Guerra da Korea e guerra da Ucrânia.",
+              "correct": false
+            },
+            {
+              "id": "d845294b-4904-41c3-a07a-821145ea025b",
+              "questionId": "462495ad-5d40-429b-b4a9-24b26ff3e1ea",
+              "content": "Guerra da cisplatina e guerra do Vietnã.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "bd782c3b-7caa-44c0-801c-a8bcc5e44065",
+          "quizId": "5ee50935-def5-4823-9486-0e3941ef484c",
+          "content": "Em qual país a URSS implantou uma base de mísseis para intimidar os EUA?",
+          "options": [
+            {
+              "id": "695f55b9-5996-4a0c-981e-e8d4ae839220",
+              "questionId": "bd782c3b-7caa-44c0-801c-a8bcc5e44065",
+              "content": "Ucrânia.",
+              "correct": false
+            },
+            {
+              "id": "59f6445b-0980-457d-934c-0c91b22682c1",
+              "questionId": "bd782c3b-7caa-44c0-801c-a8bcc5e44065",
+              "content": "Brasil.",
+              "correct": false
+            },
+            {
+              "id": "c990dd6a-c4d0-4819-a9d8-9ae5abdc43f6",
+              "questionId": "bd782c3b-7caa-44c0-801c-a8bcc5e44065",
+              "content": "Japão.",
+              "correct": false
+            },
+            {
+              "id": "a839786d-6d24-4184-8c88-6fceebff8e7f",
+              "questionId": "bd782c3b-7caa-44c0-801c-a8bcc5e44065",
+              "content": "Alemanha.",
+              "correct": false
+            },
+            {
+              "id": "ddc7ace6-3ba3-41b3-b66f-69fbc956febe",
+              "questionId": "bd782c3b-7caa-44c0-801c-a8bcc5e44065",
+              "content": "Cuba.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "id": "71dcd0f8-ee73-4297-aadc-4cab32cb8f29",
+          "quizId": "5ee50935-def5-4823-9486-0e3941ef484c",
+          "content": "Qual organização foi criada pelos norte americanos para garantir a segurança dos países aliados?",
+          "options": [
+            {
+              "id": "1609e028-ebd5-4974-a253-38399a6a49db",
+              "questionId": "71dcd0f8-ee73-4297-aadc-4cab32cb8f29",
+              "content": "KGB.",
+              "correct": false
+            },
+            {
+              "id": "7ae96de1-c589-40be-bcdb-852f27450ac6",
+              "questionId": "71dcd0f8-ee73-4297-aadc-4cab32cb8f29",
+              "content": "ONU.",
+              "correct": false
+            },
+            {
+              "id": "115808c0-47d1-455c-9b49-330b16490ae2",
+              "questionId": "71dcd0f8-ee73-4297-aadc-4cab32cb8f29",
+              "content": "FBI.",
+              "correct": false
+            },
+            {
+              "id": "a066db54-cefe-4665-bdbb-34e2fa389445",
+              "questionId": "71dcd0f8-ee73-4297-aadc-4cab32cb8f29",
+              "content": "OTAN.",
+              "correct": true
+            },
+            {
+              "id": "71d94bab-f171-4f92-8ad2-651aed6b9d2c",
+              "questionId": "71dcd0f8-ee73-4297-aadc-4cab32cb8f29",
+              "content": "KFC.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "30a02419-1e24-4196-9d18-4c1df9970d3f",
+          "quizId": "5ee50935-def5-4823-9486-0e3941ef484c",
+          "content": "O que foi o pacto de Varsóvia?",
+          "options": [
+            {
+              "id": "b9fae6a3-03b9-4af3-81fc-0db6be27966b",
+              "questionId": "30a02419-1e24-4196-9d18-4c1df9970d3f",
+              "content": "Foi um plano de guerra para acabar com os EUA.",
+              "correct": false
+            },
+            {
+              "id": "fd008c4c-8d97-4a99-9938-2c0924107342",
+              "questionId": "30a02419-1e24-4196-9d18-4c1df9970d3f",
+              "content": "Foi um tratado de trégua entre a URSS e EUA gerando o fim da guerra.",
+              "correct": false
+            },
+            {
+              "id": "6c1501a4-8387-439b-acf3-55488dffa220",
+              "questionId": "30a02419-1e24-4196-9d18-4c1df9970d3f",
+              "content": "Foi um acordo militar assinado pelas nações do bloco socialista.",
+              "correct": true
+            },
+            {
+              "id": "e5c6be56-a7ed-4d3f-b3f8-96779130de00",
+              "questionId": "30a02419-1e24-4196-9d18-4c1df9970d3f",
+              "content": "Foi um plano econômico da URSS.",
+              "correct": false
+            },
+            {
+              "id": "2c450010-8203-49e3-a2b1-a01a3c4bfd60",
+              "questionId": "30a02419-1e24-4196-9d18-4c1df9970d3f",
+              "content": "Foi um pacto de guerra entre as nações.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "33826593-952e-451f-aef0-72b5baa2c51a",
+          "quizId": "5ee50935-def5-4823-9486-0e3941ef484c",
+          "content": "Quais são respectivamente as organizações de espionagem da URSS e dos EUA?",
+          "options": [
+            {
+              "id": "0a597586-8a34-4a45-b9b8-e0e621c2ddc1",
+              "questionId": "33826593-952e-451f-aef0-72b5baa2c51a",
+              "content": "FBI e CIA.",
+              "correct": false
+            },
+            {
+              "id": "16f73efd-9836-4959-8735-cdb5fad63a0b",
+              "questionId": "33826593-952e-451f-aef0-72b5baa2c51a",
+              "content": "KGB e FBI.",
+              "correct": false
+            },
+            {
+              "id": "c12b65fb-1bcf-4ebe-8945-22626f711088",
+              "questionId": "33826593-952e-451f-aef0-72b5baa2c51a",
+              "content": "KGB e CIA.",
+              "correct": true
+            },
+            {
+              "id": "ca317402-fb8c-49c5-9b8a-90075c2fa0e1",
+              "questionId": "33826593-952e-451f-aef0-72b5baa2c51a",
+              "content": "ONU e CIA.",
+              "correct": false
+            },
+            {
+              "id": "5e98f343-1174-460b-8d0d-ac1e7bd6c2ce",
+              "questionId": "33826593-952e-451f-aef0-72b5baa2c51a",
+              "content": "KGB e ONU.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "64d1010d-1d0f-435e-914d-4095286ef7e4",
+      "title": "Brasil Colonial",
+      "time": 30,
+      "category": "História",
+      "author": "Eugênio",
+      "questions": [
+        {
+          "id": "6d7b1e1d-4b54-49b9-a96e-eb934767487f",
+          "quizId": "64d1010d-1d0f-435e-914d-4095286ef7e4",
+          "content": "O período colonial no Brasil teve início em:",
+          "options": [
+            {
+              "id": "6bc50142-ed88-43ac-82ae-4d3b51193540",
+              "questionId": "6d7b1e1d-4b54-49b9-a96e-eb934767487f",
+              "content": "1530",
+              "correct": true
+            },
+            {
+              "id": "cded0939-1872-4314-a807-8d44adfa72cb",
+              "questionId": "6d7b1e1d-4b54-49b9-a96e-eb934767487f",
+              "content": "1500",
+              "correct": false
+            },
+            {
+              "id": "360ba64c-00bf-4784-983e-b0af011f43a0",
+              "questionId": "6d7b1e1d-4b54-49b9-a96e-eb934767487f",
+              "content": "1600",
+              "correct": false
+            },
+            {
+              "id": "3dccfe55-4d54-496c-b85d-4e30683f4d91",
+              "questionId": "6d7b1e1d-4b54-49b9-a96e-eb934767487f",
+              "content": "1589",
+              "correct": false
+            },
+            {
+              "id": "e30fda1c-90cf-425b-b77b-b0968e7a2124",
+              "questionId": "6d7b1e1d-4b54-49b9-a96e-eb934767487f",
+              "content": "1630",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "cca7522a-d415-4b2f-943a-ed46856d516b",
+          "quizId": "64d1010d-1d0f-435e-914d-4095286ef7e4",
+          "content": "No período pré-colonial a atividade econômica que teve maior destaque foi:",
+          "options": [
+            {
+              "id": "b031c5ac-e3b9-48af-8691-d25d6dc5f07e",
+              "questionId": "cca7522a-d415-4b2f-943a-ed46856d516b",
+              "content": "Extração do pau-brasil.",
+              "correct": true
+            },
+            {
+              "id": "bbbd7a3c-bf50-47c4-a7db-404240ab8b2e",
+              "questionId": "cca7522a-d415-4b2f-943a-ed46856d516b",
+              "content": "Mineração.",
+              "correct": false
+            },
+            {
+              "id": "4140a181-34d6-4a69-8290-08470ff4246e",
+              "questionId": "cca7522a-d415-4b2f-943a-ed46856d516b",
+              "content": "Exportação de cana-de-açúcar.",
+              "correct": false
+            },
+            {
+              "id": "50d1a89d-41b7-4c26-912b-e4275559fa13",
+              "questionId": "cca7522a-d415-4b2f-943a-ed46856d516b",
+              "content": "Exportação café.",
+              "correct": false
+            },
+            {
+              "id": "0108c871-f184-424d-a649-c0cbe44d7ed0",
+              "questionId": "cca7522a-d415-4b2f-943a-ed46856d516b",
+              "content": "Produção de algodão.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "51bb067d-8efa-4eae-95b6-eeccc8b67a87",
+          "quizId": "64d1010d-1d0f-435e-914d-4095286ef7e4",
+          "content": "O Tratado de Tordesilhas foi um acordo entre:",
+          "options": [
+            {
+              "id": "03e5d6e0-460c-4593-96e7-174521b0cf92",
+              "questionId": "51bb067d-8efa-4eae-95b6-eeccc8b67a87",
+              "content": "Brasil e Portugal.",
+              "correct": false
+            },
+            {
+              "id": "a558b964-b02c-4849-a157-4fb8586cb6a7",
+              "questionId": "51bb067d-8efa-4eae-95b6-eeccc8b67a87",
+              "content": "França e Portugal.",
+              "correct": false
+            },
+            {
+              "id": "bd3d79d7-7601-4a35-a20a-df188e8b932d",
+              "questionId": "51bb067d-8efa-4eae-95b6-eeccc8b67a87",
+              "content": "Portugal e Inglaterra.",
+              "correct": false
+            },
+            {
+              "id": "782360b4-a29f-4c6a-a68b-910010bbe5a0",
+              "questionId": "51bb067d-8efa-4eae-95b6-eeccc8b67a87",
+              "content": "Inglaterra e França.",
+              "correct": false
+            },
+            {
+              "id": "3da19d05-8518-4448-aa9d-964703fc2757",
+              "questionId": "51bb067d-8efa-4eae-95b6-eeccc8b67a87",
+              "content": "Portugal e Espanha.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "id": "47197261-4249-49f9-bf92-6505239625ff",
+          "quizId": "64d1010d-1d0f-435e-914d-4095286ef7e4",
+          "content": "Sobre o período chamado Brasil Colônia, selecione a alternativa INCORRETA.",
+          "options": [
+            {
+              "id": "974f55ce-3ccf-4111-9de3-0d2d383c8e6c",
+              "questionId": "47197261-4249-49f9-bf92-6505239625ff",
+              "content": "A esquadra de Pedro Álvares Cabral saiu da Espanha.",
+              "correct": true
+            },
+            {
+              "id": "a47bd25a-fb2c-4087-8056-6696d2b767e9",
+              "questionId": "47197261-4249-49f9-bf92-6505239625ff",
+              "content": "O monte que os portugueses avistaram foi chamado de Monte Pascoal.",
+              "correct": false
+            },
+            {
+              "id": "2b36417b-8fca-418b-b414-470949b742f1",
+              "questionId": "47197261-4249-49f9-bf92-6505239625ff",
+              "content": "Quando os colonizadores do Brasil chegaram no território correspondente ao Brasil os portugueses rezaram uma missa.",
+              "correct": false
+            },
+            {
+              "id": "86b28bf6-07b2-48da-966e-ccbb063fb322",
+              "questionId": "47197261-4249-49f9-bf92-6505239625ff",
+              "content": "O escrivão da esquadra de Pedro Álvares Cabral era Pero Vaz de Caminha.",
+              "correct": false
+            },
+            {
+              "id": "285d6018-aabd-4f30-b636-cfcc083dfe24",
+              "questionId": "47197261-4249-49f9-bf92-6505239625ff",
+              "content": "A motivação dos portugueses era conquistar novos territórios.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "23950e54-4c64-4fb1-9a4c-cd7d4d2e96be",
+          "quizId": "64d1010d-1d0f-435e-914d-4095286ef7e4",
+          "content": "Em 1534, a Coroa portuguesa dividiu o território de sua Colônia em 15 partes que ficaram conhecidos como:",
+          "options": [
+            {
+              "id": "0466b165-8a9e-4c88-992e-528776afe198",
+              "questionId": "23950e54-4c64-4fb1-9a4c-cd7d4d2e96be",
+              "content": "Governos Gerais.",
+              "correct": false
+            },
+            {
+              "id": "2e84136a-73ff-49b0-84be-0516eec964e9",
+              "questionId": "23950e54-4c64-4fb1-9a4c-cd7d4d2e96be",
+              "content": "Tratado de Tordesilhas.",
+              "correct": false
+            },
+            {
+              "id": "12e8660f-c7fc-4ea5-8cd8-8253d1ef6dcc",
+              "questionId": "23950e54-4c64-4fb1-9a4c-cd7d4d2e96be",
+              "content": "Capitanias Hereditárias.",
+              "correct": true
+            },
+            {
+              "id": "82d7f637-3915-4beb-b021-bde383ed5d19",
+              "questionId": "23950e54-4c64-4fb1-9a4c-cd7d4d2e96be",
+              "content": "Tratado dos Donatários.",
+              "correct": false
+            },
+            {
+              "id": "1716b26f-a971-4724-b0ce-c0a29c6102c1",
+              "questionId": "23950e54-4c64-4fb1-9a4c-cd7d4d2e96be",
+              "content": "Sesmarias.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "9abfbf9e-a84f-42f0-a1ad-7c18d1214f1d",
+          "quizId": "64d1010d-1d0f-435e-914d-4095286ef7e4",
+          "content": "No período do Brasil colonial, outros países invadiram o território brasileiro, foram eles:",
+          "options": [
+            {
+              "id": "156c1827-2ada-416e-a52d-20b33b3727c5",
+              "questionId": "9abfbf9e-a84f-42f0-a1ad-7c18d1214f1d",
+              "content": "Espanha e Inglaterra.",
+              "correct": false
+            },
+            {
+              "id": "17c8923d-d991-4016-914d-58eb83578046",
+              "questionId": "9abfbf9e-a84f-42f0-a1ad-7c18d1214f1d",
+              "content": "Holanda e Espanha.",
+              "correct": false
+            },
+            {
+              "id": "ae8c056f-be27-40d1-b2b8-5ea0f09ba63a",
+              "questionId": "9abfbf9e-a84f-42f0-a1ad-7c18d1214f1d",
+              "content": "França e Espanha.",
+              "correct": false
+            },
+            {
+              "id": "1c4efddd-6e30-4881-b7d9-d87f7e45eedb",
+              "questionId": "9abfbf9e-a84f-42f0-a1ad-7c18d1214f1d",
+              "content": "França e Holanda.",
+              "correct": true
+            },
+            {
+              "id": "94a075a7-ed6e-4122-b783-d1a655f8240c",
+              "questionId": "9abfbf9e-a84f-42f0-a1ad-7c18d1214f1d",
+              "content": "Inglaterra e França.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "f9e48119-87ad-4f47-8dce-0a87f84b2ca2",
+          "quizId": "64d1010d-1d0f-435e-914d-4095286ef7e4",
+          "content": "Qual foi acontecimento em Portugal que deu força para o processo de independência do Brasil?",
+          "options": [
+            {
+              "id": "8c07c6f2-97f5-473d-ad24-f8186c91428f",
+              "questionId": "f9e48119-87ad-4f47-8dce-0a87f84b2ca2",
+              "content": "Revolução Liberal do Porto.",
+              "correct": true
+            },
+            {
+              "id": "4e06420c-2174-4b29-b1d1-e4983d2a92f7",
+              "questionId": "f9e48119-87ad-4f47-8dce-0a87f84b2ca2",
+              "content": "Chegada da família real no Brasil.",
+              "correct": false
+            },
+            {
+              "id": "938c10e9-2f24-4413-9413-2e73cb18874b",
+              "questionId": "f9e48119-87ad-4f47-8dce-0a87f84b2ca2",
+              "content": "Guerra Civil Portuguesa.",
+              "correct": false
+            },
+            {
+              "id": "ee50a169-aa70-485c-b0f4-244b872d2372",
+              "questionId": "f9e48119-87ad-4f47-8dce-0a87f84b2ca2",
+              "content": "Guerra dos Laranjais.",
+              "correct": false
+            },
+            {
+              "id": "2ed6f749-5a9f-4859-9562-20a0e66832b2",
+              "questionId": "f9e48119-87ad-4f47-8dce-0a87f84b2ca2",
+              "content": "Terremoto em Lisboa.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "db14d32a-6c6b-491f-804b-3647e1600141",
+          "quizId": "64d1010d-1d0f-435e-914d-4095286ef7e4",
+          "content": "O que foi a União Ibérica?",
+          "options": [
+            {
+              "id": "d16e3d29-a81c-471c-bc82-5c4ac1b23f4e",
+              "questionId": "db14d32a-6c6b-491f-804b-3647e1600141",
+              "content": "Foi uma união entre Itália e Espanha.",
+              "correct": false
+            },
+            {
+              "id": "0e7c2076-6726-46cf-901f-609f41a19dac",
+              "questionId": "db14d32a-6c6b-491f-804b-3647e1600141",
+              "content": "Foi uma união entre França e Portugal.",
+              "correct": false
+            },
+            {
+              "id": "3c42b68a-71c5-46e3-a0df-bf2037eca083",
+              "questionId": "db14d32a-6c6b-491f-804b-3647e1600141",
+              "content": "Foi uma união entre Portugal e Espanha.",
+              "correct": true
+            },
+            {
+              "id": "ac4a236b-f0bf-46c5-934f-4b0b9e7b4ae4",
+              "questionId": "db14d32a-6c6b-491f-804b-3647e1600141",
+              "content": "Foi uma união entre Bélgica e França.",
+              "correct": false
+            },
+            {
+              "id": "633e7145-b3cb-4450-a8df-f66589e6f0af",
+              "questionId": "db14d32a-6c6b-491f-804b-3647e1600141",
+              "content": "Foi uma união entre Irlanda e Reino Unido.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "b4f69ec4-7093-4b07-bffc-4cb199c4fdbc",
+          "quizId": "64d1010d-1d0f-435e-914d-4095286ef7e4",
+          "content": "Qual foi primeira capital do Brasil?",
+          "options": [
+            {
+              "id": "eb00e765-efa1-48d5-867d-8c6e083c68d4",
+              "questionId": "b4f69ec4-7093-4b07-bffc-4cb199c4fdbc",
+              "content": "São Paulo.",
+              "correct": false
+            },
+            {
+              "id": "f68c4028-2087-4755-8851-65c38ecbf4fe",
+              "questionId": "b4f69ec4-7093-4b07-bffc-4cb199c4fdbc",
+              "content": "Rio de Janeiro.",
+              "correct": false
+            },
+            {
+              "id": "a035a78b-9039-491f-9ab4-ea13404a8c38",
+              "questionId": "b4f69ec4-7093-4b07-bffc-4cb199c4fdbc",
+              "content": "Salvador.",
+              "correct": true
+            },
+            {
+              "id": "bf971f9d-b435-4451-93f3-66f0ddae8fd6",
+              "questionId": "b4f69ec4-7093-4b07-bffc-4cb199c4fdbc",
+              "content": "Fortaleza.",
+              "correct": false
+            },
+            {
+              "id": "53b8fcec-4b1e-4690-bfa6-f1bdac0978eb",
+              "questionId": "b4f69ec4-7093-4b07-bffc-4cb199c4fdbc",
+              "content": "Brasília.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "10dfd063-d33e-4cc5-8d57-e56dba4ee900",
+          "quizId": "64d1010d-1d0f-435e-914d-4095286ef7e4",
+          "content": "Quando o Brasil colônia teve seu fim?",
+          "options": [
+            {
+              "id": "4d1e9918-3a46-46e1-8198-0caa7418a70d",
+              "questionId": "10dfd063-d33e-4cc5-8d57-e56dba4ee900",
+              "content": "1816.",
+              "correct": false
+            },
+            {
+              "id": "cd88274d-468c-49b3-b661-d54589ce6572",
+              "questionId": "10dfd063-d33e-4cc5-8d57-e56dba4ee900",
+              "content": "1890.",
+              "correct": false
+            },
+            {
+              "id": "7f1d2db5-97eb-4322-9f2f-8163641bd297",
+              "questionId": "10dfd063-d33e-4cc5-8d57-e56dba4ee900",
+              "content": "1817.",
+              "correct": false
+            },
+            {
+              "id": "8abfd44c-cfa5-4c69-aef4-75b544361fa1",
+              "questionId": "10dfd063-d33e-4cc5-8d57-e56dba4ee900",
+              "content": "1814.",
+              "correct": false
+            },
+            {
+              "id": "96c5bede-d82b-45b4-831a-13033dd06a4f",
+              "questionId": "10dfd063-d33e-4cc5-8d57-e56dba4ee900",
+              "content": "1815.",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c385ce87-96d4-4f1e-b741-691fe79ed07e",
+      "title": "Ligação Covalente",
+      "time": 30,
+      "category": "Química",
+      "questions": [
+        {
+          "id": "603d4615-76bd-40ac-b4bd-1ca3ae22431d",
+          "quizId": "c385ce87-96d4-4f1e-b741-691fe79ed07e",
+          "content": "O que são ligações covalentes?",
+          "options": [
+            {
+              "id": "9ebdf9e0-bee5-42ea-919f-a06762a28f39",
+              "questionId": "603d4615-76bd-40ac-b4bd-1ca3ae22431d",
+              "content": "São ligações químicas que correspondem à união dos átomos, para a formação de substâncias químicas, por meio da transferência de elétrons.",
+              "correct": false
+            },
+            {
+              "id": "c9c5a2fd-e9f9-40ab-a750-746036dfb671",
+              "questionId": "603d4615-76bd-40ac-b4bd-1ca3ae22431d",
+              "content": "São ligações químicas que correspondem à união dos átomos, para a formação de substâncias químicas, por meio do compartilhamento de elétrons.",
+              "correct": true
+            },
+            {
+              "id": "4298ac10-05b5-47ba-bd1e-3ef7bfb63dab",
+              "questionId": "603d4615-76bd-40ac-b4bd-1ca3ae22431d",
+              "content": "São ligações químicas que correspondem à união dos átomos, para a formação de substâncias químicas, por meio da perda total de elétrons.",
+              "correct": false
+            },
+            {
+              "id": "4c23ea4b-b234-45a2-96cc-90ef274cdec5",
+              "questionId": "603d4615-76bd-40ac-b4bd-1ca3ae22431d",
+              "content": "São ligações químicas que correspondem à união dos átomos, para a formação de substâncias químicas, por meio da perda ou do ganho de elétrons.",
+              "correct": false
+            },
+            {
+              "id": "e5c302c7-eef1-461f-ad90-384e389e38ef",
+              "questionId": "603d4615-76bd-40ac-b4bd-1ca3ae22431d",
+              "content": "São ligações químicas que correspondem à união dos átomos, para a formação de substâncias químicas, realizada entre íons.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "81983776-a05d-45cb-a718-c97655c3a9dc",
+          "quizId": "c385ce87-96d4-4f1e-b741-691fe79ed07e",
+          "content": "As ligações covalentes também são conhecidas como:",
+          "options": [
+            {
+              "id": "ce9a2711-c714-4a52-b67c-37b64b1e45e7",
+              "questionId": "81983776-a05d-45cb-a718-c97655c3a9dc",
+              "content": "Ligação Eletrovalente.",
+              "correct": false
+            },
+            {
+              "id": "5a583523-8afe-49aa-bfbd-4293ec442768",
+              "questionId": "81983776-a05d-45cb-a718-c97655c3a9dc",
+              "content": "Ligação Metálica.",
+              "correct": false
+            },
+            {
+              "id": "c9326364-119b-4c44-9e23-972da25a6ca9",
+              "questionId": "81983776-a05d-45cb-a718-c97655c3a9dc",
+              "content": "Ligação Molecular.",
+              "correct": true
+            },
+            {
+              "id": "7457d883-faaf-4674-b4fb-658787b6aaad",
+              "questionId": "81983776-a05d-45cb-a718-c97655c3a9dc",
+              "content": "Ligação Iônica.",
+              "correct": false
+            },
+            {
+              "id": "06f637b8-fb0e-4960-accb-215110e0c216",
+              "questionId": "81983776-a05d-45cb-a718-c97655c3a9dc",
+              "content": "Ligação Heteropolar.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "88eb3fce-96bd-4ca9-952e-41d22f1a8fab",
+          "quizId": "c385ce87-96d4-4f1e-b741-691fe79ed07e",
+          "content": "Quais são os tipos de ligação covalente?",
+          "options": [
+            {
+              "id": "d3c54e8d-8e8d-4594-8561-c2a7e2608fc1",
+              "questionId": "88eb3fce-96bd-4ca9-952e-41d22f1a8fab",
+              "content": "Simples e Dativa.",
+              "correct": false
+            },
+            {
+              "id": "44891fe9-7ca4-430e-946a-3e024c9959f9",
+              "questionId": "88eb3fce-96bd-4ca9-952e-41d22f1a8fab",
+              "content": "Simples, Dupla, Tripla e Quádrupla.",
+              "correct": false
+            },
+            {
+              "id": "01b01831-b6e8-48c1-9bef-528ef430b79b",
+              "questionId": "88eb3fce-96bd-4ca9-952e-41d22f1a8fab",
+              "content": "Apenas Dupla.",
+              "correct": false
+            },
+            {
+              "id": "95b18f38-a4a4-4d43-8ba2-671a50d1d0f7",
+              "questionId": "88eb3fce-96bd-4ca9-952e-41d22f1a8fab",
+              "content": "Dupla, Tripla, Quádrupla e Dativa.",
+              "correct": false
+            },
+            {
+              "id": "1a0bd67f-8b00-42c7-8b7c-eede4162f6b6",
+              "questionId": "88eb3fce-96bd-4ca9-952e-41d22f1a8fab",
+              "content": "Simples, Dupla, Tripla e Dativa.",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "id": "8c39c273-355d-41bd-9d9c-ddce1dffdd72",
+          "quizId": "c385ce87-96d4-4f1e-b741-691fe79ed07e",
+          "content": "Como podemos representar as ligações covalentes?",
+          "options": [
+            {
+              "id": "4fedc814-2b07-46c4-9908-16e533626deb",
+              "questionId": "8c39c273-355d-41bd-9d9c-ddce1dffdd72",
+              "content": "Pela fórmula estrutural plana.",
+              "correct": false
+            },
+            {
+              "id": "2efe7177-146d-494b-97f3-a3fcb610fc36",
+              "questionId": "8c39c273-355d-41bd-9d9c-ddce1dffdd72",
+              "content": "Pela fórmula molecular.",
+              "correct": false
+            },
+            {
+              "id": "9818070f-2043-4fe1-97a0-f3977681c69b",
+              "questionId": "8c39c273-355d-41bd-9d9c-ddce1dffdd72",
+              "content": "Pela fórmula eletrônica.",
+              "correct": false
+            },
+            {
+              "id": "f9bb08c9-0ca9-44a6-ba7a-7bd6db0e3e67",
+              "questionId": "8c39c273-355d-41bd-9d9c-ddce1dffdd72",
+              "content": "Todas estão corretas.",
+              "correct": true
+            },
+            {
+              "id": "fd448325-3927-4cfc-bdf0-83a3f1e7b43c",
+              "questionId": "8c39c273-355d-41bd-9d9c-ddce1dffdd72",
+              "content": "Todas estão erradas.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "65e91a78-71e9-4646-8f87-c469b36547fc",
+          "quizId": "c385ce87-96d4-4f1e-b741-691fe79ed07e",
+          "content": "A ligação covalente ocorre basicamente em elementos que dispõem de quantos elétrons, na camada de valência?",
+          "options": [
+            {
+              "id": "6804c5f7-e89c-4b12-be27-f4d6504dbcab",
+              "questionId": "65e91a78-71e9-4646-8f87-c469b36547fc",
+              "content": "1 a 4",
+              "correct": true
+            },
+            {
+              "id": "c6a0cbf4-1990-4f3a-ab35-6f9c84535a41",
+              "questionId": "65e91a78-71e9-4646-8f87-c469b36547fc",
+              "content": "5 a 7",
+              "correct": false
+            },
+            {
+              "id": "b86414ab-adb1-4a1d-ab56-43f8c49361e2",
+              "questionId": "65e91a78-71e9-4646-8f87-c469b36547fc",
+              "content": "3 a 7",
+              "correct": false
+            },
+            {
+              "id": "6ac769fd-1490-42eb-86cd-660382bc658b",
+              "questionId": "65e91a78-71e9-4646-8f87-c469b36547fc",
+              "content": "1 a 5",
+              "correct": false
+            },
+            {
+              "id": "d316ad0e-ec64-4506-bf08-dc17faae8718",
+              "questionId": "65e91a78-71e9-4646-8f87-c469b36547fc",
+              "content": "4 a 7",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "id": "4f7e9c76-4f46-4d10-99fc-bef90d536995",
+          "quizId": "c385ce87-96d4-4f1e-b741-691fe79ed07e",
+          "content": "Qual das substâncias abaixo é formada por  meio da ligação covalente?",
+          "options": [
+            {
+              "id": "26749d83-07ea-43b2-b856-30cb0c55c47b",
+              "questionId": "4f7e9c76-4f46-4d10-99fc-bef90d536995",
+              "content": "Na₂O",
+              "correct": false
+            },
+            {
+              "id": "73c6cc46-d390-4e19-956d-f5f853aa14fe",
+              "questionId": "4f7e9c76-4f46-4d10-99fc-bef90d536995",
+              "content": "CO₂",
+              "correct": true
+            },
+            {
+              "id": "eecaebb0-ed2d-48dd-8b16-0d377ad93e11",
+              "questionId": "4f7e9c76-4f46-4d10-99fc-bef90d536995",
+              "content": "CaO",
+              "correct": false
+            },
+            {
+              "id": "9f17c5a4-bd92-42bf-88b1-161bc0961a7a",
+              "questionId": "4f7e9c76-4f46-4d10-99fc-bef90d536995",
+              "content": "CaCl₂",
+              "correct": false
+            },
+            {
+              "id": "e8af4977-e23b-4e9a-be6c-26dc84d03e2c",
+              "questionId": "4f7e9c76-4f46-4d10-99fc-bef90d536995",
+              "content": "NaCl",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "e112a02f-d462-41e8-ace7-aaa3208c0273",
+          "quizId": "c385ce87-96d4-4f1e-b741-691fe79ed07e",
+          "content": "Qual das substâncias abaixo realiza uma ligação covalente TRIPLA?",
+          "options": [
+            {
+              "id": "89861344-c21d-4fe8-9837-b9f2cad5e748",
+              "questionId": "e112a02f-d462-41e8-ace7-aaa3208c0273",
+              "content": "N₂",
+              "correct": true
+            },
+            {
+              "id": "be1595c5-e878-4a68-b9ab-e56b02801796",
+              "questionId": "e112a02f-d462-41e8-ace7-aaa3208c0273",
+              "content": "H₂O",
+              "correct": false
+            },
+            {
+              "id": "e00213aa-f3fd-488d-9501-0de54d25f7ab",
+              "questionId": "e112a02f-d462-41e8-ace7-aaa3208c0273",
+              "content": "H₂",
+              "correct": false
+            },
+            {
+              "id": "666cd5d9-114a-43ac-aeff-91ebfef33ca3",
+              "questionId": "e112a02f-d462-41e8-ace7-aaa3208c0273",
+              "content": "Cl₂",
+              "correct": false
+            },
+            {
+              "id": "3fe13f0b-9ac4-4581-99d2-9cf09a49fd69",
+              "questionId": "e112a02f-d462-41e8-ace7-aaa3208c0273",
+              "content": "CO₂",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "d3f5ffc7-ade1-4bf0-a73a-48d61af9ae1d",
+          "quizId": "c385ce87-96d4-4f1e-b741-691fe79ed07e",
+          "content": "O gás nitrogênio (N₂), o cloro (Cl₂) e a água (H₂O) , apresentam respectivamente, na fórmula estrutural das suas moléculas, ligações covalentes classificadas em?",
+          "options": [
+            {
+              "id": "8af482b9-4479-4d6b-a971-c5f94ce00578",
+              "questionId": "d3f5ffc7-ade1-4bf0-a73a-48d61af9ae1d",
+              "content": "Simples, Dupla, Tripla.",
+              "correct": false
+            },
+            {
+              "id": "3845d68c-e0bf-43a8-a79c-fde8afab95cb",
+              "questionId": "d3f5ffc7-ade1-4bf0-a73a-48d61af9ae1d",
+              "content": "Tripla, Dupla, Simples.",
+              "correct": false
+            },
+            {
+              "id": "bdd19b2b-18b5-457d-aefd-55f1545972ca",
+              "questionId": "d3f5ffc7-ade1-4bf0-a73a-48d61af9ae1d",
+              "content": "Dupla, Dupla, Tripla.",
+              "correct": false
+            },
+            {
+              "id": "e226c3e6-dfb1-4a74-b5c3-a549318148c6",
+              "questionId": "d3f5ffc7-ade1-4bf0-a73a-48d61af9ae1d",
+              "content": "Tripla, Simples, Simples.",
+              "correct": true
+            },
+            {
+              "id": "a8c06244-c9b2-495a-91cb-f2db8c73492c",
+              "questionId": "d3f5ffc7-ade1-4bf0-a73a-48d61af9ae1d",
+              "content": "Dupla, Simples, Tripla. ",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "646633aa-0e0f-44f6-9d56-f24b0570c9d1",
+          "quizId": "c385ce87-96d4-4f1e-b741-691fe79ed07e",
+          "content": "O gás hidrogênio, está em uma das suas representações das ligações covalentes, no caso abaixo, a substância se encontra na sua fórmula:\n\nH ─ H\n",
+          "options": [
+            {
+              "id": "792ec6d7-275b-4a01-a037-1224174c0a3b",
+              "questionId": "646633aa-0e0f-44f6-9d56-f24b0570c9d1",
+              "content": "Estrutural-Plana.",
+              "correct": true
+            },
+            {
+              "id": "7192abc1-5cdb-4c83-8152-b8e6c2253071",
+              "questionId": "646633aa-0e0f-44f6-9d56-f24b0570c9d1",
+              "content": "Dativa.",
+              "correct": false
+            },
+            {
+              "id": "0532381c-862e-40e4-aab9-6d05e0968fbb",
+              "questionId": "646633aa-0e0f-44f6-9d56-f24b0570c9d1",
+              "content": "Simples.",
+              "correct": false
+            },
+            {
+              "id": "e2471a7b-6fb9-4705-a692-7d42e495e396",
+              "questionId": "646633aa-0e0f-44f6-9d56-f24b0570c9d1",
+              "content": "Tripla.",
+              "correct": false
+            },
+            {
+              "id": "a68d7eee-4e28-43ee-8953-fbc6b751122b",
+              "questionId": "646633aa-0e0f-44f6-9d56-f24b0570c9d1",
+              "content": "Dupla.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "d9c78d0a-0e86-4c4e-b695-87c51159d4a9",
+          "quizId": "c385ce87-96d4-4f1e-b741-691fe79ed07e",
+          "content": "Qual é a melhor representação para a fórmula molecular do gás carbônico? C(4A) O(6A)",
+          "options": [
+            {
+              "id": "f5fa25f7-03b3-4681-b7c4-26b7fb1cb9ab",
+              "questionId": "d9c78d0a-0e86-4c4e-b695-87c51159d4a9",
+              "content": "O ─ C ─ O",
+              "correct": false
+            },
+            {
+              "id": "d4042bb9-aed1-4edb-b878-5347eea0df16",
+              "questionId": "d9c78d0a-0e86-4c4e-b695-87c51159d4a9",
+              "content": "C ─ O ─ C",
+              "correct": false
+            },
+            {
+              "id": "27359a2b-e2ee-4943-8664-642c57e4d443",
+              "questionId": "d9c78d0a-0e86-4c4e-b695-87c51159d4a9",
+              "content": "CO",
+              "correct": false
+            },
+            {
+              "id": "e64fe390-e97f-4866-bfd3-7fe81a3898e3",
+              "questionId": "d9c78d0a-0e86-4c4e-b695-87c51159d4a9",
+              "content": "C₂O",
+              "correct": false
+            },
+            {
+              "id": "736a2016-327b-429d-bc0a-80b68f10e688",
+              "questionId": "d9c78d0a-0e86-4c4e-b695-87c51159d4a9",
+              "content": "CO₂",
+              "correct": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
