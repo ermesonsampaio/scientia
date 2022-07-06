@@ -7,6 +7,7 @@ import { Container, Form, Header, SubTitle, Title } from './styles';
 import { Props } from '../../types/navigation';
 import { useAuthContext } from '../../contexts/auth';
 import { Alert } from '../../components/Alert';
+import { AuthError } from '../../types/firebase';
 
 export function SignInScreen({ navigation }: Props<'SignIn'>) {
   const [email, setEmail] = useState('');
@@ -65,7 +66,9 @@ export function SignInScreen({ navigation }: Props<'SignIn'>) {
             try {
               setIsLoading(true);
               await signIn({ email, password });
-            } catch ({ code }: { code: string }) {
+            } catch (error) {
+              const { code } = error as AuthError;
+
               switch (code) {
                 case 'auth/invalid-email':
                   setErrorMessage('E-mail inválido.');

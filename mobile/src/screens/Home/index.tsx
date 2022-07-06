@@ -37,16 +37,6 @@ import {
 } from './styles';
 import { useAuthContext } from '../../contexts/auth';
 
-const categories = [
-  'Física',
-  'Geografia',
-  'História',
-  'Química',
-  'Biologia',
-  'Filosifia',
-  'Astronomia',
-];
-
 export function HomeScreen({ navigation }: Props<'Home'>) {
   const [quizzes, setQuizzes] = useState<QuizType[]>([]);
   const [categories, setCategories] = useState<Category[]>([]);
@@ -54,7 +44,7 @@ export function HomeScreen({ navigation }: Props<'Home'>) {
   const [activeQuiz, setActiveQuiz] = useState<QuizType | null>(null);
   const bottomSheetRef = useRef<BottomSheetRefProps>(null);
 
-  const { isAuthenticated, user } = useAuthContext();
+  const { user } = useAuthContext();
 
   useEffect(() => {
     (async () => {

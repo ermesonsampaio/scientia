@@ -13,9 +13,8 @@ import {
   Title,
   TextContainer,
 } from './styles';
-import { TabProps } from '../../types/navigation';
 
-export function UserScreen({}: TabProps<'User'>) {
+export function UserScreen() {
   const { correctPoints, incorrectPoints, quizzesCompleted } = useUserContext();
 
   return (

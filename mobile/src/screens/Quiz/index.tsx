@@ -18,7 +18,6 @@ import {
   ButtonWrapper,
 } from './styles';
 import { gestureHandlerRootHOC } from 'react-native-gesture-handler';
-import Markdown from 'react-native-markdown-display';
 
 function _QuizScreen({
   route: { params: quizData },
