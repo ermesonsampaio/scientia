@@ -1,12 +1,10 @@
 import React, { useState } from 'react';
 import { Ionicons } from '@expo/vector-icons';
 import { TouchableOpacity } from 'react-native';
-import { PrimaryButton } from '../../components/PrimaryButton';
-import { TextInput } from '../../components/TextInput';
+import { PrimaryButton, TextInput, Alert } from '../../components';
 import { Container, Form, Header, SubTitle, Title } from './styles';
 import { Props } from '../../types/navigation';
 import { useAuthContext } from '../../contexts/auth';
-import { Alert } from '../../components/Alert';
 import { AuthError } from '../../types/firebase';
 
 export function SignUpScreen({ navigation }: Props<'SignUp'>) {

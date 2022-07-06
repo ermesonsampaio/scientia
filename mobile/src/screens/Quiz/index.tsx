@@ -1,6 +1,6 @@
 import { Audio } from 'expo-av';
 import React, { useEffect, useState } from 'react';
-import { PrimaryButton } from '../../components/PrimaryButton';
+import { PrimaryButton } from '../../components';
 import { useUserContext } from '../../contexts/user';
 import { Option, Question } from '../../types/models';
 import { Props } from '../../types/navigation';

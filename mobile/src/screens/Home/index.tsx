@@ -2,9 +2,12 @@ import React, { useEffect, useRef, useState } from 'react';
 import { Ionicons } from '@expo/vector-icons';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import VideoIcon from '../../assets/video.svg';
-import { BottomSheet, BottomSheetRef } from '../../components/BottomSheet';
-import { PrimaryButton } from '../../components/PrimaryButton';
-import { SearchInput } from '../../components/SearchInput';
+import {
+  BottomSheet,
+  BottomSheetRef,
+  PrimaryButton,
+  SearchInput,
+} from '../../components';
 import api from '../../services/api';
 import { Category, Quiz as QuizType } from '../../types/models';
 import { Props } from '../../types/navigation';
