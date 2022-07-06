@@ -7,6 +7,7 @@ import { Container, Form, Header, SubTitle, Title } from './styles';
 import { Props } from '../../types/navigation';
 import { useAuthContext } from '../../contexts/auth';
 import { Alert } from '../../components/Alert';
+import { AuthError } from '../../types/firebase';
 
 export function SignUpScreen({ navigation }: Props<'SignUp'>) {
   const [username, setUsername] = useState('');
@@ -74,7 +75,9 @@ export function SignUpScreen({ navigation }: Props<'SignUp'>) {
             try {
               setIsLoading(true);
               await createUserAndSignIn({ username, email, password });
-            } catch ({ code }: { code: string }) {
+            } catch (error) {
+              const { code } = error as AuthError;
+
               switch (code) {
                 case 'auth/email-already-in-use':
                   setErrorMessage(
