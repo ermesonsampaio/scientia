@@ -20,12 +20,12 @@ export interface BottomSheetProps {
   onClose?: () => void;
 }
 
-export interface BottomSheetRefProps {
+export interface BottomSheetRef {
   scrollTo: (destination: number) => void;
   isActive: () => boolean;
 }
 
-export const BottomSheet = forwardRef<BottomSheetRefProps, BottomSheetProps>(
+const BottomSheet = forwardRef<BottomSheetRef, BottomSheetProps>(
   ({ children, onClose }: BottomSheetProps, ref) => {
     const translateY = useSharedValue(0);
     const active = useSharedValue(false);
@@ -91,3 +91,5 @@ export const BottomSheet = forwardRef<BottomSheetRefProps, BottomSheetProps>(
     );
   }
 );
+
+export default BottomSheet;

@@ -3,7 +3,7 @@ import { Container, Input } from './styles';
 import { Ionicons } from '@expo/vector-icons';
 import { TextInput } from 'react-native';
 
-export function SearchInput() {
+export default function SearchInput() {
   const inputRef = createRef<TextInput>();
 
   return (

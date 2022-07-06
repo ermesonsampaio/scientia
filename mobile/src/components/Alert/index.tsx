@@ -23,7 +23,7 @@ export interface AlertProps {
   actions: Action[];
 }
 
-export function Alert({
+export default function Alert({
   message,
   visible = false,
   title,

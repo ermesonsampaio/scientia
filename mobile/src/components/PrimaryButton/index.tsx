@@ -10,7 +10,7 @@ export interface PrimaryButtonProps extends TouchableOpacityProps {
   onPress?: () => void;
 }
 
-export function PrimaryButton({
+export default function PrimaryButton({
   title,
   active,
   onPress,

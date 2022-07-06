@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { Ionicons } from '@expo/vector-icons';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import VideoIcon from '../../assets/video.svg';
-import { BottomSheet, BottomSheetRefProps } from '../../components/BottomSheet';
+import { BottomSheet, BottomSheetRef } from '../../components/BottomSheet';
 import { PrimaryButton } from '../../components/PrimaryButton';
 import { SearchInput } from '../../components/SearchInput';
 import api from '../../services/api';
@@ -42,7 +42,7 @@ export function HomeScreen({ navigation }: Props<'Home'>) {
   const [categories, setCategories] = useState<Category[]>([]);
   const [activeCategory, setActiveCategory] = useState<Category | null>(null);
   const [activeQuiz, setActiveQuiz] = useState<QuizType | null>(null);
-  const bottomSheetRef = useRef<BottomSheetRefProps>(null);
+  const bottomSheetRef = useRef<BottomSheetRef>(null);
 
   const { user } = useAuthContext();
 
