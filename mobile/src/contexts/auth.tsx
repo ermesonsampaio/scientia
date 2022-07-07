@@ -1,6 +1,5 @@
 import React, { useContext, useEffect } from 'react';
 import { createContext, useState } from 'react';
-import { navigation } from '../navigation';
 import { AuthenticationService } from '../services/auth';
 import { firebaseApp } from '../services/firebase';
 
@@ -56,7 +55,7 @@ export const AuthContextProvider: React.FC = ({ children }) => {
   }
 
   useEffect(() => {
-    const unsubscribe = authenticationService
+    const subscriber = authenticationService
       .getAuth()
       .onAuthStateChanged((user) => {
         if (user) {
@@ -64,24 +63,17 @@ export const AuthContextProvider: React.FC = ({ children }) => {
             username: user.displayName as string,
             email: user.email as string,
           });
-
-          setIsAuthenticated(true);
-        } else {
-          setIsAuthenticated(false);
         }
 
-        if (isInitializing) setIsInitializing(false);
+        setIsInitializing(false);
       });
 
-    return unsubscribe;
+    return subscriber;
   }, []);
 
   useEffect(() => {
-    if (!isInitializing) {
-      if (isAuthenticated) navigation.replace('Home', { screen: 'Quizzes' });
-      else navigation.replace('Onboarding', undefined);
-    }
-  }, [isAuthenticated]);
+    setIsAuthenticated(!!user);
+  }, [user]);
 
   return (
     <AuthContext.Provider

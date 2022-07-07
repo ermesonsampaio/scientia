@@ -6,6 +6,7 @@ import { Container, Form, Header, SubTitle, Title } from './styles';
 import { Props } from '../../types/navigation';
 import { useAuthContext } from '../../contexts/auth';
 import { AuthError } from '../../types/firebase';
+import { Home } from '../../navigation/Home';
 
 export function SignInScreen({ navigation }: Props<'SignIn'>) {
   const [email, setEmail] = useState('');
@@ -13,8 +14,9 @@ export function SignInScreen({ navigation }: Props<'SignIn'>) {
   const [errorMessage, setErrorMessage] = useState('');
   const [isLoading, setIsLoading] = useState(false);
 
-  const { signIn } = useAuthContext();
+  const { signIn, isAuthenticated } = useAuthContext();
 
+  if (isAuthenticated) return <Home />;
   return (
     <Container>
       <Alert

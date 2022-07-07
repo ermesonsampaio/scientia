@@ -3,11 +3,19 @@ import { StatusBar } from 'expo-status-bar';
 import { THEME } from '../theme';
 import { DarkTheme, NavigationContainer } from '@react-navigation/native';
 import { QuizScreen } from '../screens/Quiz';
-import { UserContextProvider } from '../contexts/user';
 import { OnboardingScreen } from '../screens/Onboarding';
 import { SignInScreen } from '../screens/SignIn';
 import { SignUpScreen } from '../screens/SignUp';
-import { AuthContextProvider } from '../contexts/auth';
+import {
+  useFonts,
+  Jost_100Thin,
+  Jost_300Light,
+  Jost_400Regular,
+  Jost_500Medium,
+  Jost_600SemiBold,
+  Jost_700Bold,
+} from '@expo-google-fonts/jost';
+import { useAuthContext } from '../contexts/auth';
 import {
   createNavigationContainerRef,
   StackActions,
@@ -15,6 +23,7 @@ import {
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { RootStackParamList } from '../types/navigation';
 import { Home } from './Home';
+import AppLoading from 'expo-app-loading';
 
 const navigationRef = createNavigationContainerRef();
 
@@ -40,61 +49,71 @@ export const navigation = {
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
 export function Navigator() {
+  const [fontsLoaded] = useFonts({
+    Jost_100Thin,
+    Jost_300Light,
+    Jost_400Regular,
+    Jost_500Medium,
+    Jost_600SemiBold,
+    Jost_700Bold,
+  });
+
+  const { isInitializing } = useAuthContext();
+
+  if (!fontsLoaded || isInitializing) return <AppLoading />;
   return (
-    <AuthContextProvider>
-      <UserContextProvider>
-        <NavigationContainer
-          theme={{
-            ...DarkTheme,
-            colors: {
-              ...DarkTheme.colors,
-              ...THEME.colors,
+    <>
+      <NavigationContainer
+        theme={{
+          ...DarkTheme,
+          colors: {
+            ...DarkTheme.colors,
+            ...THEME.colors,
+          },
+        }}
+        ref={navigationRef}
+      >
+        <Stack.Navigator
+          screenOptions={{
+            headerShadowVisible: false,
+            headerStyle: {
+              backgroundColor: THEME.colors.background,
             },
+            headerTitleStyle: {
+              fontFamily: THEME.fonts.medium,
+            },
+            animation: 'fade_from_bottom',
           }}
-          ref={navigationRef}
+          initialRouteName={'Onboarding'}
         >
-          <Stack.Navigator
-            screenOptions={{
-              headerShadowVisible: false,
-              headerStyle: {
-                backgroundColor: THEME.colors.background,
-              },
-              headerTitleStyle: {
-                fontFamily: THEME.fonts.medium,
-              },
-              animation: 'fade_from_bottom',
-            }}
-            initialRouteName={'Home'}
-          >
-            <Stack.Screen
-              name="Onboarding"
-              component={OnboardingScreen}
-              options={{ headerShown: false }}
-            />
+          <Stack.Screen
+            name="Onboarding"
+            component={OnboardingScreen}
+            options={{ headerShown: false }}
+          />
 
-            <Stack.Screen
-              name="Home"
-              component={Home}
-              options={{ headerShown: false }}
-            />
+          <Stack.Screen
+            name="Home"
+            component={Home}
+            options={{ headerShown: false }}
+          />
 
-            <Stack.Screen name="Quiz" component={QuizScreen} />
+          <Stack.Screen name="Quiz" component={QuizScreen} />
 
-            <Stack.Screen
-              name="SignIn"
-              component={SignInScreen}
-              options={{ headerShown: false }}
-            />
+          <Stack.Screen
+            name="SignIn"
+            component={SignInScreen}
+            options={{ headerShown: false }}
+          />
 
-            <Stack.Screen
-              name="SignUp"
-              component={SignUpScreen}
-              options={{ headerShown: false }}
-            />
-          </Stack.Navigator>
-        </NavigationContainer>
-        <StatusBar style="light" backgroundColor={THEME.colors.background} />
-      </UserContextProvider>
-    </AuthContextProvider>
+          <Stack.Screen
+            name="SignUp"
+            component={SignUpScreen}
+            options={{ headerShown: false }}
+          />
+        </Stack.Navigator>
+      </NavigationContainer>
+      <StatusBar style="light" backgroundColor={THEME.colors.background} />
+    </>
   );
 }
