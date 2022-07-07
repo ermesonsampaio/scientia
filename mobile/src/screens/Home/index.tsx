@@ -2,7 +2,7 @@ import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { Ionicons } from '@expo/vector-icons';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import VideoIcon from '../../assets/video.svg';
-import { PrimaryButton, SearchInput } from '../../components';
+import { PrimaryButton, SearchInput, Skeleton } from '../../components';
 import api from '../../services/api';
 import { Category, Quiz as QuizType } from '../../types/models';
 import { Props } from '../../types/navigation';
@@ -40,6 +40,7 @@ import Animated, {
   useAnimatedStyle,
   useSharedValue,
 } from 'react-native-reanimated';
+import { Dimensions, View } from 'react-native';
 export function HomeScreen({ navigation }: Props<'Home'>) {
   const [quizzes, setQuizzes] = useState<QuizType[]>([]);
   const [categories, setCategories] = useState<Category[]>([]);
@@ -104,68 +105,150 @@ export function HomeScreen({ navigation }: Props<'Home'>) {
     [containerAnimatedStyle]
   );
 
+  const containerWidth = Dimensions.get('window').width - 40;
+
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
       <Animated.View style={containerStyle}>
         <Header>
-          <Title>Olá {user?.username}</Title>
+          {user?.username ? (
+            <Title>Olá {user?.username}</Title>
+          ) : (
+            <Skeleton
+              width={containerWidth * 0.3}
+              height={20}
+              style={{ borderRadius: 5, marginBottom: 10 }}
+            />
+          )}
           <SubTitle>Vamos testar seus conhecimentos?</SubTitle>
           <SearchInput />
         </Header>
 
         <QuizzesSection>
           <QuizzesHeader>
-            <CategoriesList
-              data={categories}
-              horizontal
-              showsHorizontalScrollIndicator={false}
-              renderItem={({ item, index }) => {
-                const category: Category = item as Category;
+            {categories.length > 0 ? (
+              <CategoriesList
+                data={categories}
+                horizontal
+                showsHorizontalScrollIndicator={false}
+                renderItem={({ item, index }) => {
+                  const category: Category = item as Category;
+
+                  return (
+                    <CategoryItem
+                      onPress={() => setActiveCategory(category)}
+                      key={index}
+                    >
+                      <CategoryItemText
+                        active={activeCategory?.id === category.id}
+                      >
+                        {category.label}
+                      </CategoryItemText>
+                    </CategoryItem>
+                  );
+                }}
+              />
+            ) : (
+              <View style={{ flexDirection: 'row' }}>
+                <Skeleton
+                  width={100}
+                  height={40}
+                  style={{ borderRadius: 5, marginLeft: 20, marginRight: 10 }}
+                />
+
+                <Skeleton
+                  width={100}
+                  height={40}
+                  style={{ borderRadius: 5, marginHorizontal: 10 }}
+                />
+
+                <Skeleton
+                  width={100}
+                  height={40}
+                  style={{ borderRadius: 5, marginHorizontal: 10 }}
+                />
+
+                <Skeleton
+                  width={100}
+                  height={40}
+                  style={{ borderRadius: 5, marginHorizontal: 10 }}
+                />
+              </View>
+            )}
+          </QuizzesHeader>
+
+          {quizzes.length > 0 ? (
+            <Quizzes
+              showsVerticalScrollIndicator={false}
+              data={quizzes}
+              keyExtractor={(item) => (item as QuizType).id.toString()}
+              renderItem={({ item }) => {
+                const quiz = item as QuizType;
 
                 return (
-                  <CategoryItem
-                    onPress={() => setActiveCategory(category)}
-                    key={index}
+                  <Quiz
+                    activeOpacity={0.8}
+                    onPress={() => changeActiveQuiz(quiz)}
                   >
-                    <CategoryItemText
-                      active={activeCategory?.id === category.id}
-                    >
-                      {category.label}
-                    </CategoryItemText>
-                  </CategoryItem>
+                    <QuizTitle>{quiz?.title}</QuizTitle>
+
+                    <QuizInfo>
+                      <Ionicons
+                        name="ios-clipboard-outline"
+                        size={14}
+                        color="#fff"
+                      />
+                      <QuizInfoText>
+                        {quiz?.questions.length} Questões
+                      </QuizInfoText>
+                    </QuizInfo>
+                  </Quiz>
                 );
               }}
             />
-          </QuizzesHeader>
+          ) : (
+            <>
+              <Skeleton
+                width={containerWidth}
+                height={100}
+                style={{
+                  borderRadius: 5,
+                  alignSelf: 'center',
+                  marginVertical: 10,
+                }}
+              />
 
-          <Quizzes
-            showsVerticalScrollIndicator={false}
-            data={quizzes}
-            keyExtractor={(item) => (item as QuizType).id.toString()}
-            renderItem={({ item }) => {
-              const quiz = item as QuizType;
+              <Skeleton
+                width={containerWidth}
+                height={100}
+                style={{
+                  borderRadius: 5,
+                  alignSelf: 'center',
+                  marginVertical: 10,
+                }}
+              />
 
-              return (
-                <Quiz
-                  activeOpacity={0.8}
-                  onPress={() => changeActiveQuiz(quiz)}
-                >
-                  <QuizTitle>{quiz?.title}</QuizTitle>
+              <Skeleton
+                width={containerWidth}
+                height={100}
+                style={{
+                  borderRadius: 5,
+                  alignSelf: 'center',
+                  marginVertical: 10,
+                }}
+              />
 
-                  <QuizInfo>
-                    <Ionicons
-                      name="ios-clipboard-outline"
-                      size={14}
-                      color="#fff"
-                    />
-                    <QuizInfoText>
-                      {quiz?.questions.length} Questões
-                    </QuizInfoText>
-                  </QuizInfo>
-                </Quiz>
-              );
-            }}
-          />
+              <Skeleton
+                width={containerWidth}
+                height={100}
+                style={{
+                  borderRadius: 5,
+                  alignSelf: 'center',
+                  marginVertical: 10,
+                }}
+              />
+            </>
+          )}
         </QuizzesSection>
       </Animated.View>
 
