@@ -1,13 +1,8 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { Ionicons } from '@expo/vector-icons';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import VideoIcon from '../../assets/video.svg';
-import {
-  BottomSheet,
-  BottomSheetRef,
-  PrimaryButton,
-  SearchInput,
-} from '../../components';
+import { PrimaryButton, SearchInput } from '../../components';
 import api from '../../services/api';
 import { Category, Quiz as QuizType } from '../../types/models';
 import { Props } from '../../types/navigation';
@@ -26,7 +21,6 @@ import {
   CategoriesList,
   CategoryItem,
   CategoryItemText,
-  Container,
   Header,
   Quiz,
   QuizInfo,
@@ -39,13 +33,32 @@ import {
   Title,
 } from './styles';
 import { useAuthContext } from '../../contexts/auth';
-
+import BottomSheet from '@gorhom/bottom-sheet';
+import Animated, {
+  Extrapolate,
+  interpolate,
+  useAnimatedStyle,
+  useSharedValue,
+} from 'react-native-reanimated';
 export function HomeScreen({ navigation }: Props<'Home'>) {
   const [quizzes, setQuizzes] = useState<QuizType[]>([]);
   const [categories, setCategories] = useState<Category[]>([]);
   const [activeCategory, setActiveCategory] = useState<Category | null>(null);
   const [activeQuiz, setActiveQuiz] = useState<QuizType | null>(null);
-  const bottomSheetRef = useRef<BottomSheetRef>(null);
+
+  const bottomSheetRef = useRef<BottomSheet>(null);
+  const snapPoints = useMemo(() => ['25%', '90%'], []);
+
+  const animatedIndex = useSharedValue(0);
+
+  const containerAnimatedStyle = useAnimatedStyle(() => ({
+    opacity: interpolate(
+      animatedIndex.value,
+      [0, 1],
+      [1, 0],
+      Extrapolate.CLAMP
+    ),
+  }));
 
   const { user } = useAuthContext();
 
@@ -61,9 +74,8 @@ export function HomeScreen({ navigation }: Props<'Home'>) {
   }, []);
 
   useEffect(() => {
-    if (bottomSheetRef.current?.isActive()) bottomSheetRef.current?.scrollTo(0);
-    if (activeQuiz)
-      setTimeout(() => bottomSheetRef.current?.scrollTo(-300), 500);
+    if (activeQuiz) bottomSheetRef.current?.snapToIndex(0);
+    else bottomSheetRef.current?.close();
   }, [activeQuiz]);
 
   useEffect(() => {
@@ -81,9 +93,20 @@ export function HomeScreen({ navigation }: Props<'Home'>) {
     navigation.navigate('Quiz', activeQuiz!);
   }
 
+  const containerStyle = useMemo(
+    () => [
+      {
+        flex: 1,
+        paddingTop: 50,
+      },
+      containerAnimatedStyle,
+    ],
+    [containerAnimatedStyle]
+  );
+
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
-      <Container>
+      <Animated.View style={containerStyle}>
         <Header>
           <Title>Olá {user?.username}</Title>
           <SubTitle>Vamos testar seus conhecimentos?</SubTitle>
@@ -144,9 +167,15 @@ export function HomeScreen({ navigation }: Props<'Home'>) {
             }}
           />
         </QuizzesSection>
-      </Container>
+      </Animated.View>
 
-      <BottomSheet ref={bottomSheetRef} onClose={() => setActiveQuiz(null)}>
+      <BottomSheet
+        ref={bottomSheetRef}
+        snapPoints={snapPoints}
+        index={-1}
+        enablePanDownToClose
+        animatedIndex={animatedIndex}
+      >
         <AboutWrapper>
           <AboutContainer>
             <AboutTitle>{activeQuiz?.title}</AboutTitle>

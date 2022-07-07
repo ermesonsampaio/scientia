@@ -1,12 +1,6 @@
 import styled from 'styled-components/native';
 import { THEME } from '../../theme';
 
-export const Container = styled.View`
-  flex: 1;
-  padding: 50px 0 0;
-  background-color: ${THEME.colors.background};
-`;
-
 export const Header = styled.View`
   padding: 0 20px;
 `;
@@ -81,7 +75,7 @@ export const AboutContainer = styled.ScrollView.attrs({
   },
 })`
   flex: 1;
-  background-color: ${THEME.colors.card};
+  background-color: ${THEME.colors.background};
 `;
 
 export const AboutWrapper = styled.View`
@@ -139,7 +133,7 @@ export const AboutReferenceTitle = styled.Text`
 
 export const AboutButtonContainer = styled.View`
   position: absolute;
-  bottom: 50px;
+  bottom: 0px;
   padding: 20px;
   width: 100%;
 `;
