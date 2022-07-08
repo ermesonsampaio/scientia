@@ -22,7 +22,7 @@ Tabela de conteúdos
 
 ## <p id="about">Sobre o projeto</p>
 
-Scientia é uma forma de dinamizar a forma padrão de estudo dos alunos brasileiros por meio da gameficação do processo de aprendizado.
+Scientia é uma forma de dinamizar a forma padrão de estudo dos alunos brasileiros por meio da gamificação do processo de aprendizado.
 
 
 ## <p id="features">Funcionalidades</p>
