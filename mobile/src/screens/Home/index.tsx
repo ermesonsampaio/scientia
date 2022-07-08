@@ -3,7 +3,6 @@ import { Ionicons } from '@expo/vector-icons';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import VideoIcon from '../../assets/video.svg';
 import { PrimaryButton, SearchInput, Skeleton } from '../../components';
-import api from '../../services/api';
 import { Category, Quiz as QuizType } from '../../types/models';
 import { Props } from '../../types/navigation';
 import {
@@ -41,6 +40,9 @@ import Animated, {
   useSharedValue,
 } from 'react-native-reanimated';
 import { Dimensions, View } from 'react-native';
+import { firebaseApp } from '../../services/firebase';
+import { FirestoreService } from '../../services/firestore';
+
 export function HomeScreen({ navigation }: Props<'Home'>) {
   const [quizzes, setQuizzes] = useState<QuizType[]>([]);
   const [categories, setCategories] = useState<Category[]>([]);
@@ -65,10 +67,18 @@ export function HomeScreen({ navigation }: Props<'Home'>) {
 
   useEffect(() => {
     (async () => {
-      const { data: quizzes } = await api.get<QuizType[]>('/quizzes');
+      const firestoreService = new FirestoreService(firebaseApp);
+
+      const quizzes = await firestoreService.getCollectionData<QuizType>(
+        'questionnaires'
+      );
+
       setQuizzes(quizzes);
 
-      const { data: categories } = await api.get<Category[]>('/categories');
+      const categories = await firestoreService.getCollectionData<Category>(
+        'categories'
+      );
+
       setCategories(categories);
       setActiveCategory(categories[0]);
     })();

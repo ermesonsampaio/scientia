@@ -113,15 +113,25 @@ function _QuizScreen({
                 onPress={() => {
                   if (readyToVerify) return;
 
-                  if (activeOption?.id === option.id) setActiveOption(null);
+                  if (
+                    activeQuestion.options.indexOf(activeOption!) ===
+                    activeQuestion.options.indexOf(option)
+                  )
+                    setActiveOption(null);
                   else setActiveOption(option);
                 }}
-                active={activeOption?.id === option.id}
+                active={
+                  activeQuestion.options.indexOf(activeOption!) ===
+                  activeQuestion.options.indexOf(option)
+                }
                 readyToVerify={readyToVerify}
                 isCorrect={option.isCorrect}
               >
                 <OptionText
-                  active={activeOption?.id === option.id}
+                  active={
+                    activeQuestion.options.indexOf(activeOption!) ===
+                    activeQuestion.options.indexOf(option)
+                  }
                   readyToVerify={readyToVerify}
                   isCorrect={option.isCorrect}
                 >
@@ -142,7 +152,7 @@ function _QuizScreen({
               ? 'Próxima'
               : 'Finalizar'
           }
-          active={!!activeOption?.id}
+          active={!!activeOption}
           onPress={!readyToVerify ? verifyResponse : nextQuestion}
         />
       </ButtonWrapper>

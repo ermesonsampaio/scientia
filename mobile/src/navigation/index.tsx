@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { THEME } from '../theme';
 import { DarkTheme, NavigationContainer } from '@react-navigation/native';
@@ -23,7 +23,7 @@ import {
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { RootStackParamList } from '../types/navigation';
 import { Home } from './Home';
-import AppLoading from 'expo-app-loading';
+import * as SplashScreen from 'expo-splash-screen';
 
 const navigationRef = createNavigationContainerRef();
 
@@ -60,7 +60,23 @@ export function Navigator() {
 
   const { isInitializing } = useAuthContext();
 
-  if (!fontsLoaded || isInitializing) return <AppLoading />;
+  useEffect(() => {
+    async function prepare() {
+      await SplashScreen.preventAutoHideAsync();
+    }
+
+    prepare();
+  }, []);
+
+  useEffect(() => {
+    async function hideSplashScreen() {
+      await SplashScreen.hideAsync();
+    }
+
+    if (fontsLoaded && !isInitializing) hideSplashScreen();
+  }, [fontsLoaded, isInitializing]);
+
+  if (!fontsLoaded || isInitializing) return null;
   return (
     <>
       <NavigationContainer
