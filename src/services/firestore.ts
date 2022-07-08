@@ -14,12 +14,13 @@ export class FirestoreService {
   }
 
   async getCollectionData<T = unknown>(collectionName: string): Promise<T[]> {
-    const questionnairesCollection = collection(this.firestore, collectionName);
-    const questionnairesSnapshot = await getDocs(questionnairesCollection);
+    const collectionReference = collection(this.firestore, collectionName);
+    const collectionSnapshot = await getDocs(collectionReference);
 
-    return questionnairesSnapshot.docs.map((doc) => ({
+    return collectionSnapshot.docs.map((doc) => ({
       ...doc.data(),
       id: doc.id,
+    })) as unknown as T[];
     })) as T[];
   }
 }
