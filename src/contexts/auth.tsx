@@ -8,6 +8,7 @@ export interface User {
   id: string;
   username: string;
   answeredQuestionnaires: string[];
+  score: number;
 }
 
 interface SignInData {
@@ -22,17 +23,18 @@ interface CreateUserAndSignInData {
 }
 
 interface AuthContextData {
-  user?: User;
+  user: User;
   signIn: (data: SignInData) => Promise<void>;
   createUserAndSignIn: (data: CreateUserAndSignInData) => Promise<void>;
   isAuthenticated: boolean;
   isInitializing: boolean;
+  increaseScore: () => Promise<void>;
 }
 
 export const AuthContext = createContext({} as AuthContextData);
 
 export const AuthContextProvider: React.FC = ({ children }) => {
-  const [user, setUser] = useState<User | undefined>(undefined);
+  const [user, setUser] = useState<User>({} as User);
   const [isAuthenticated, setIsAuthenticated] = useState<boolean>(false);
   const [isInitializing, setIsInitializing] = useState(true);
 
@@ -46,6 +48,7 @@ export const AuthContextProvider: React.FC = ({ children }) => {
       id: user.uid,
       username: user.displayName as string,
       answeredQuestionnaires: [],
+      score: 0,
     });
   }
 
@@ -56,6 +59,13 @@ export const AuthContextProvider: React.FC = ({ children }) => {
       id: user.uid,
       username: user.displayName as string,
       answeredQuestionnaires: [],
+      score: 0,
+    });
+  }
+
+  async function increaseScore() {
+    await firestoreService.updateDocumentInColletion('users', user.id, {
+      score: user.score + 1,
     });
   }
 
@@ -71,23 +81,17 @@ export const AuthContextProvider: React.FC = ({ children }) => {
           if (!storedUser) {
             await firestoreService.setDocumentInCollection('users', user.uid, {
               answeredQuestionnaires: [],
+              score: 0,
+              username: user.displayName,
             });
 
             storedUser = await firestoreService.getDocumentData<User>(
               `users/${user.uid}`
             );
 
-            setUser({
-              ...storedUser!,
-              id: user.uid,
-              username: user.displayName as string,
-            });
+            setUser(storedUser!);
           } else {
-            setUser({
-              ...storedUser,
-              id: user.uid,
-              username: user.displayName as string,
-            });
+            setUser(storedUser);
           }
         }
 
@@ -109,6 +113,7 @@ export const AuthContextProvider: React.FC = ({ children }) => {
         createUserAndSignIn,
         isAuthenticated,
         isInitializing,
+        increaseScore,
       }}
     >
       {children}

@@ -17,6 +17,7 @@ export type RootStackParamList = {
 type TabParamList = {
   Quizzes: undefined;
   User: undefined;
+  Ranking: undefined;
 };
 
 type Props<T extends keyof RootStackParamList> = CompositeScreenProps<

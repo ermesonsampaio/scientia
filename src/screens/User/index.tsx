@@ -1,6 +1,7 @@
 import React from 'react';
 import { Circle } from 'react-native-progress';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import { useAuthContext } from '../../contexts/auth';
 import { useUserContext } from '../../contexts/user';
 import { THEME } from '../../theme';
 import {
@@ -15,7 +16,10 @@ import {
 } from './styles';
 
 export function UserScreen() {
-  const { correctPoints, incorrectPoints, quizzesCompleted } = useUserContext();
+  const {
+    user: { score },
+  } = useAuthContext();
+  const { incorrectPoints, quizzesCompleted } = useUserContext();
 
   return (
     <SafeAreaView style={{ flex: 1 }}>
@@ -25,14 +29,14 @@ export function UserScreen() {
         <Row>
           <SemiColumn>
             <TextContainer>
-              <ValueText>{correctPoints}</ValueText>
+              <ValueText>{score}</ValueText>
               <LabelText>TOTAL DE PONTOS</LabelText>
             </TextContainer>
           </SemiColumn>
 
           <SemiColumn>
             <TextContainer>
-              <ValueText>{correctPoints + incorrectPoints}</ValueText>
+              <ValueText>{score + incorrectPoints}</ValueText>
               <LabelText>TOTAIS DE QUESTÕES RESPONDIDAS</LabelText>
             </TextContainer>
           </SemiColumn>
@@ -42,7 +46,7 @@ export function UserScreen() {
           <Column>
             <Circle
               size={80}
-              progress={correctPoints / (incorrectPoints + correctPoints || 1)}
+              progress={score / (incorrectPoints + score || 1)}
               style={{ paddingRight: 30 }}
               unfilledColor={THEME.colors.card}
               borderWidth={0}
@@ -55,11 +59,7 @@ export function UserScreen() {
 
             <TextContainer>
               <ValueText>
-                {(
-                  (correctPoints / (incorrectPoints + correctPoints || 1)) *
-                  100
-                ).toFixed(1)}
-                %
+                {((score / (incorrectPoints + score || 1)) * 100).toFixed(1)}%
               </ValueText>
               <LabelText>PERCENTUAL DE ACERTO</LabelText>
             </TextContainer>
@@ -77,7 +77,7 @@ export function UserScreen() {
           <SemiColumn>
             <TextContainer>
               <ValueText>
-                {(correctPoints / (incorrectPoints || 1)).toFixed(2)}
+                {(score / (incorrectPoints || 1)).toFixed(2)}
               </ValueText>
               <LabelText>TAXA DE ACERTO/ERRO</LabelText>
             </TextContainer>

@@ -160,8 +160,8 @@ export function HomeScreen({ navigation }: Props<'Home'>) {
 
       <Animated.View style={containerStyle}>
         <Header>
-          {user?.username ? (
-            <Title>Olá {user?.username}</Title>
+          {user.username ? (
+            <Title>Olá {user.username}</Title>
           ) : (
             <Skeleton
               width={containerWidth * 0.3}

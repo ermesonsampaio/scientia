@@ -35,7 +35,7 @@ function _QuizScreen({
   const [activeOption, setActiveOption] = useState<Option | null>(null);
   const [sound, setSound] = useState<Audio.Sound>();
 
-  const { user } = useAuthContext();
+  const { user, increaseScore } = useAuthContext();
 
   const firestoreService = new FirestoreService(firebaseApp);
 
@@ -66,10 +66,10 @@ function _QuizScreen({
       (async () => await playSound())();
   }, [correctPoints]);
 
-  function verifyResponse() {
+  async function verifyResponse() {
     setReadyToVerify(true);
 
-    if (activeOption?.isCorrect) increaseCorrectPoints();
+    if (activeOption?.isCorrect) await increaseScore();
     else increaseIncorrectPoints();
   }
 
@@ -78,17 +78,13 @@ function _QuizScreen({
       increaseQuizzesCompleted();
 
       const newAnsweredQuestionnaires = [
-        ...(user?.answeredQuestionnaires as string[]),
+        ...user.answeredQuestionnaires,
         quizData.id,
       ];
 
-      await firestoreService.updateDocumentInColletion(
-        'users',
-        user?.id as string,
-        {
-          answeredQuestionnaires: [...new Set(newAnsweredQuestionnaires)],
-        }
-      );
+      await firestoreService.updateDocumentInColletion('users', user.id, {
+        answeredQuestionnaires: [...new Set(newAnsweredQuestionnaires)],
+      });
 
       navigation.replace('Home', { screen: 'Quizzes' });
     }
@@ -175,7 +171,7 @@ function _QuizScreen({
           }
           active={!!activeOption}
           onPress={async () => {
-            if (!readyToVerify) verifyResponse();
+            if (!readyToVerify) await verifyResponse();
             else await nextQuestion();
           }}
         />

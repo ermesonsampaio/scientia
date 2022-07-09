@@ -8,18 +8,37 @@ import {
   getDoc,
   setDoc,
   updateDoc,
+  orderBy,
+  query,
+  QuerySnapshot,
+  onSnapshot,
+  FirestoreError,
+  DocumentData,
 } from 'firebase/firestore';
 
 export class FirestoreService {
-  firestore: Firestore;
+  private firestore: Firestore;
 
   constructor(private readonly app: FirebaseApp) {
     this.firestore = getFirestore(app);
   }
 
-  async getCollectionData<T = unknown>(collectionName: string): Promise<T[]> {
+  async getCollectionData<T = unknown>(
+    collectionName: string,
+    orderByDTO?: { field: string; mode: 'asc' | 'desc' }
+  ): Promise<T[]> {
     const collectionReference = collection(this.firestore, collectionName);
-    const collectionSnapshot = await getDocs(collectionReference);
+
+    let filter;
+
+    if (orderByDTO) {
+      filter = query(
+        collectionReference,
+        orderBy(orderByDTO.field, orderByDTO.mode)
+      );
+    }
+
+    const collectionSnapshot = await getDocs(filter || collectionReference);
 
     return collectionSnapshot.docs.map((doc) => ({
       ...doc.data(),
@@ -60,5 +79,30 @@ export class FirestoreService {
     const documentReference = doc(collectionReference, docName);
 
     await updateDoc(documentReference, data);
+  }
+
+  async listenCollection(
+    collectionName: string,
+    orderByDTO?: { field: string; mode: 'asc' | 'desc' },
+    next?: (snapshot: QuerySnapshot<DocumentData>) => void,
+    error?: (error: FirestoreError) => void,
+    complete?: () => void
+  ) {
+    const collectionReference = collection(this.firestore, collectionName);
+
+    let filter;
+
+    if (orderByDTO) {
+      filter = query(
+        collectionReference,
+        orderBy(orderByDTO.field, orderByDTO.mode)
+      );
+    }
+
+    return onSnapshot(filter || collectionReference, {
+      next,
+      error,
+      complete,
+    });
   }
 }

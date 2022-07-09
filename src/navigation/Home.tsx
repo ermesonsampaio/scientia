@@ -5,6 +5,7 @@ import { Ionicons } from '@expo/vector-icons';
 import { HomeScreen } from '../screens/Home';
 import { UserScreen } from '../screens/User';
 import { THEME } from '../theme';
+import { RankingScreen } from '../screens/Ranking';
 
 type IconName = keyof typeof Ionicons.glyphMap;
 
@@ -22,6 +23,13 @@ const Tabs = [
     activeIcon: 'ios-analytics',
     inactiveIcon: 'ios-analytics-outline',
     component: UserScreen,
+  },
+  {
+    route: 'Ranking',
+    label: 'Ranking',
+    activeIcon: 'ios-trophy',
+    inactiveIcon: 'ios-trophy-outline',
+    component: RankingScreen,
   },
 ];
 
