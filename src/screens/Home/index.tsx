@@ -61,6 +61,16 @@ export function HomeScreen({ navigation }: Props<'Home'>) {
       [1, 0],
       Extrapolate.CLAMP
     ),
+    transform: [
+      {
+        translateY: interpolate(
+          animatedIndex.value,
+          [0, 1],
+          [0, 50],
+          Extrapolate.CLAMP
+        ),
+      },
+    ],
   }));
 
   const { user } = useAuthContext();
