@@ -17,3 +17,6 @@ run
 
 # Environment Variables
 .env
+
+# Build Settings
+eas.json
