@@ -4,6 +4,10 @@ import {
   getFirestore,
   collection,
   getDocs,
+  doc,
+  getDoc,
+  setDoc,
+  updateDoc,
 } from 'firebase/firestore';
 
 export class FirestoreService {
@@ -21,6 +25,40 @@ export class FirestoreService {
       ...doc.data(),
       id: doc.id,
     })) as unknown as T[];
-    })) as T[];
+  }
+
+  async getDocumentData<T = unknown>(path: string): Promise<T | null> {
+    const document = doc(this.firestore, path);
+    const documentSnapshot = await getDoc(document);
+
+    if (documentSnapshot.exists())
+      return {
+        ...documentSnapshot.data(),
+        id: documentSnapshot.id,
+      } as unknown as T;
+
+    return null;
+  }
+
+  async setDocumentInCollection<T = unknown>(
+    collectionName: string,
+    docName: string,
+    data: T
+  ): Promise<void> {
+    const collectionReference = collection(this.firestore, collectionName);
+    const documentReference = doc(collectionReference, docName);
+
+    await setDoc(documentReference, data);
+  }
+
+  async updateDocumentInColletion(
+    collectionName: string,
+    docName: string,
+    data: Partial<unknown>
+  ) {
+    const collectionReference = collection(this.firestore, collectionName);
+    const documentReference = doc(collectionReference, docName);
+
+    await updateDoc(documentReference, data);
   }
 }

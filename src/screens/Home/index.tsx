@@ -2,7 +2,7 @@ import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { Ionicons } from '@expo/vector-icons';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import VideoIcon from '../../assets/video.svg';
-import { PrimaryButton, SearchInput, Skeleton } from '../../components';
+import { PrimaryButton, SearchInput, Skeleton, Alert } from '../../components';
 import { Category, Quiz as QuizType } from '../../types/models';
 import { Props } from '../../types/navigation';
 import {
@@ -31,7 +31,7 @@ import {
   SubTitle,
   Title,
 } from './styles';
-import { useAuthContext } from '../../contexts/auth';
+import { useAuthContext, User } from '../../contexts/auth';
 import BottomSheet from '@gorhom/bottom-sheet';
 import Animated, {
   Extrapolate,
@@ -48,6 +48,8 @@ export function HomeScreen({ navigation }: Props<'Home'>) {
   const [categories, setCategories] = useState<Category[]>([]);
   const [activeCategory, setActiveCategory] = useState<Category | null>(null);
   const [activeQuiz, setActiveQuiz] = useState<QuizType | null>(null);
+
+  const [showAlert, setShowAlert] = useState(false);
 
   const bottomSheetRef = useRef<BottomSheet>(null);
   const snapPoints = useMemo(() => ['25%', '90%'], []);
@@ -111,7 +113,12 @@ export function HomeScreen({ navigation }: Props<'Home'>) {
   }
 
   function handleInitQuiz() {
-    navigation.navigate('Quiz', activeQuiz!);
+    const alreadyAnswered = (user as User).answeredQuestionnaires.filter(
+      (id) => (activeQuiz?.id as string) === id
+    );
+
+    if (alreadyAnswered?.length) setShowAlert(true);
+    else navigation.navigate('Quiz', activeQuiz!);
   }
 
   const containerStyle = useMemo(
@@ -129,6 +136,28 @@ export function HomeScreen({ navigation }: Props<'Home'>) {
 
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
+      <Alert
+        visible={showAlert}
+        title="Deseja continuar?"
+        message="Você já respondeu esse questionário antes, então você não obterá mais pontos respondendo esse questionário."
+        actions={[
+          {
+            label: 'Continuar',
+            suggestedAction: true,
+            onPress: () => {
+              setShowAlert(false);
+              navigation.navigate('Quiz', activeQuiz!);
+            },
+          },
+          {
+            label: 'Cancelar',
+            suggestedAction: false,
+            onPress: () => setShowAlert(false),
+          },
+        ]}
+        onRequestClose={() => setShowAlert(false)}
+      />
+
       <Animated.View style={containerStyle}>
         <Header>
           {user?.username ? (

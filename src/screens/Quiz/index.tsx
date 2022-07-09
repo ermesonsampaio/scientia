@@ -18,6 +18,9 @@ import {
   ButtonWrapper,
 } from './styles';
 import { gestureHandlerRootHOC } from 'react-native-gesture-handler';
+import { FirestoreService } from '../../services/firestore';
+import { firebaseApp } from '../../services/firebase';
+import { useAuthContext } from '../../contexts/auth';
 
 function _QuizScreen({
   route: { params: quizData },
@@ -31,6 +34,10 @@ function _QuizScreen({
   );
   const [activeOption, setActiveOption] = useState<Option | null>(null);
   const [sound, setSound] = useState<Audio.Sound>();
+
+  const { user } = useAuthContext();
+
+  const firestoreService = new FirestoreService(firebaseApp);
 
   const {
     correctPoints,
@@ -66,9 +73,23 @@ function _QuizScreen({
     else increaseIncorrectPoints();
   }
 
-  function nextQuestion() {
+  async function nextQuestion() {
     if (isLastPage) {
       increaseQuizzesCompleted();
+
+      const newAnsweredQuestionnaires = [
+        ...(user?.answeredQuestionnaires as string[]),
+        quizData.id,
+      ];
+
+      await firestoreService.updateDocumentInColletion(
+        'users',
+        user?.id as string,
+        {
+          answeredQuestionnaires: [...new Set(newAnsweredQuestionnaires)],
+        }
+      );
+
       navigation.replace('Home', { screen: 'Quizzes' });
     }
 
@@ -153,7 +174,10 @@ function _QuizScreen({
               : 'Finalizar'
           }
           active={!!activeOption}
-          onPress={!readyToVerify ? verifyResponse : nextQuestion}
+          onPress={async () => {
+            if (!readyToVerify) verifyResponse();
+            else await nextQuestion();
+          }}
         />
       </ButtonWrapper>
     </Container>

@@ -2,10 +2,12 @@ import React, { useContext, useEffect } from 'react';
 import { createContext, useState } from 'react';
 import { AuthenticationService } from '../services/auth';
 import { firebaseApp } from '../services/firebase';
+import { FirestoreService } from '../services/firestore';
 
-interface User {
+export interface User {
+  id: string;
   username: string;
-  email: string;
+  answeredQuestionnaires: string[];
 }
 
 interface SignInData {
@@ -35,13 +37,15 @@ export const AuthContextProvider: React.FC = ({ children }) => {
   const [isInitializing, setIsInitializing] = useState(true);
 
   const authenticationService = new AuthenticationService(firebaseApp);
+  const firestoreService = new FirestoreService(firebaseApp);
 
   async function signIn(data: SignInData) {
     const { user } = await authenticationService.signIn(data);
 
     setUser({
+      id: user.uid,
       username: user.displayName as string,
-      email: user.email as string,
+      answeredQuestionnaires: [],
     });
   }
 
@@ -49,20 +53,42 @@ export const AuthContextProvider: React.FC = ({ children }) => {
     const { user } = await authenticationService.signUpAndSignIn(data);
 
     setUser({
+      id: user.uid,
       username: user.displayName as string,
-      email: user.email as string,
+      answeredQuestionnaires: [],
     });
   }
 
   useEffect(() => {
     const subscriber = authenticationService
       .getAuth()
-      .onAuthStateChanged((user) => {
+      .onAuthStateChanged(async (user) => {
         if (user) {
-          setUser({
-            username: user.displayName as string,
-            email: user.email as string,
-          });
+          let storedUser = await firestoreService.getDocumentData<User>(
+            `users/${user.uid}`
+          );
+
+          if (!storedUser) {
+            await firestoreService.setDocumentInCollection('users', user.uid, {
+              answeredQuestionnaires: [],
+            });
+
+            storedUser = await firestoreService.getDocumentData<User>(
+              `users/${user.uid}`
+            );
+
+            setUser({
+              ...storedUser!,
+              id: user.uid,
+              username: user.displayName as string,
+            });
+          } else {
+            setUser({
+              ...storedUser,
+              id: user.uid,
+              username: user.displayName as string,
+            });
+          }
         }
 
         setIsInitializing(false);

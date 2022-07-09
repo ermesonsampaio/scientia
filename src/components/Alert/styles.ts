@@ -29,6 +29,7 @@ export const Message = styled.Text`
   color: #ddd;
   font-family: ${THEME.fonts.regular};
   margin: 16px 0 32px 0;
+  text-align: center;
 `;
 
 export const Button = styled.TouchableOpacity.attrs({
