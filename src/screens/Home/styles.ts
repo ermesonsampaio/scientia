@@ -1,3 +1,4 @@
+import { BottomSheetScrollView } from '@gorhom/bottom-sheet';
 import styled from 'styled-components/native';
 import { THEME } from '../../theme';
 
@@ -69,9 +70,9 @@ export const QuizInfoText = styled.Text`
   margin-left: 6px;
 `;
 
-export const AboutContainer = styled.ScrollView.attrs({
+export const AboutContainer = styled(BottomSheetScrollView).attrs({
   contentContainerStyle: {
-    padding: 30,
+    padding: 20,
   },
 })`
   flex: 1;
@@ -129,13 +130,6 @@ export const AboutReferenceTitle = styled.Text`
   font-family: ${THEME.fonts.light};
   font-size: 18px;
   margin-left: 20px;
-`;
-
-export const AboutButtonContainer = styled.View`
-  position: absolute;
-  bottom: 0px;
-  padding: 20px;
-  width: 100%;
 `;
 
 export const CategoryItemText = styled.Text(
