@@ -27,11 +27,11 @@ Scientia é uma forma de dinamizar a forma padrão de estudo dos alunos brasilei
 
 ## <p id="features">Funcionalidades</p>
 
-- [ ] Cadastro do usuário na plataforma
+- [x] Cadastro do usuário na plataforma
 - [ ] Após o cadastro do usuário, ele pode:
   - [x] Responder os questionários disponíveis
-  - [ ] Ganhar pontos por meio de seus acertos nos questionários
-  - [ ] Fazer parte do ranking de acordo com sua pontuação
+  - [x] Ganhar pontos por meio de seus acertos nos questionários
+  - [x] Fazer parte do ranking de acordo com sua pontuação
   - [ ] Participar de clubes
   - [ ] Criar clubes usando suas **moedas**
   - [ ] Criar questionários
