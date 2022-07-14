@@ -14,6 +14,8 @@ import {
   onSnapshot,
   FirestoreError,
   DocumentData,
+  where,
+  WhereFilterOp,
 } from 'firebase/firestore';
 
 export class FirestoreService {
@@ -25,18 +27,21 @@ export class FirestoreService {
 
   async getCollectionData<T = unknown>(
     collectionName: string,
-    orderByDTO?: { field: string; mode: 'asc' | 'desc' }
+    orderByDTO?: { field: string; mode: 'asc' | 'desc' },
+    whereDTO?: { field: string; operation: WhereFilterOp; value: unknown }
   ): Promise<T[]> {
     const collectionReference = collection(this.firestore, collectionName);
 
-    let filter;
+    const queryConstraints = [];
 
-    if (orderByDTO) {
-      filter = query(
-        collectionReference,
-        orderBy(orderByDTO.field, orderByDTO.mode)
+    if (orderByDTO)
+      queryConstraints.push(orderBy(orderByDTO.field, orderByDTO.mode));
+    if (whereDTO)
+      queryConstraints.push(
+        where(whereDTO.field, whereDTO.operation, whereDTO.value)
       );
-    }
+
+    const filter = query(collectionReference, ...queryConstraints);
 
     const collectionSnapshot = await getDocs(filter || collectionReference);
 
