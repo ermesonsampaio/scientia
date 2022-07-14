@@ -6,7 +6,6 @@ import { PrimaryButton, SearchInput, Skeleton, Alert } from '../../components';
 import { Category, Quiz as QuizType } from '../../types/models';
 import { Props } from '../../types/navigation';
 import {
-  AboutButtonContainer,
   AboutContainer,
   AboutReference,
   AboutReferences,
@@ -82,7 +81,13 @@ export function HomeScreen({ navigation }: Props<'Home'>) {
       const firestoreService = new FirestoreService(firebaseApp);
 
       const quizzes = await firestoreService.getCollectionData<QuizType>(
-        'questionnaires'
+        'questionnaires',
+        undefined,
+        {
+          field: 'approved',
+          operation: '==',
+          value: true,
+        }
       );
 
       setQuizzes(quizzes);
@@ -103,7 +108,7 @@ export function HomeScreen({ navigation }: Props<'Home'>) {
 
   useEffect(() => {
     setQuizzes(
-      quizzes.filter((quiz) => quiz.category.id === activeCategory?.id)
+      quizzes.filter((quiz) => quiz?.category?.id === activeCategory?.id)
     );
   }, [activeCategory]);
 
@@ -248,7 +253,7 @@ export function HomeScreen({ navigation }: Props<'Home'>) {
                         color="#fff"
                       />
                       <QuizInfoText>
-                        {quiz?.questions.length} Questões
+                        {quiz?.questions?.length} Questões
                       </QuizInfoText>
                     </QuizInfo>
                   </Quiz>
@@ -338,15 +343,14 @@ export function HomeScreen({ navigation }: Props<'Home'>) {
                 </AboutReferences>
               </AboutSection>
             )}
-          </AboutContainer>
 
-          <AboutButtonContainer>
             <PrimaryButton
               title="Avançar"
               active
               onPress={() => handleInitQuiz()}
+              style={{ margin: 0 }}
             />
-          </AboutButtonContainer>
+          </AboutContainer>
         </AboutWrapper>
       </BottomSheet>
     </GestureHandlerRootView>

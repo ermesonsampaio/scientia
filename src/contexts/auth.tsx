@@ -102,7 +102,7 @@ export const AuthContextProvider: React.FC = ({ children }) => {
   }, []);
 
   useEffect(() => {
-    setIsAuthenticated(!!user);
+    setIsAuthenticated(Object.keys(user)?.length > 0);
   }, [user]);
 
   return (
